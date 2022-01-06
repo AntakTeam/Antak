@@ -5,10 +5,10 @@
 --        -- https://t.me/CXRCX --         --
 ------------------------------------------------ 
 DevRio  = dofile("./libs/redis.lua").connect("127.0.0.1", 6379)
-serpent = dofile("./libs/serpent.lua")
-JSON    = dofile("./libs/dkjson.lua")
-json    = dofile("./libs/JSON.lua")
-URL     = dofile("./libs/url.lua")
+serpent = dofile("./library/serpent.lua")
+JSON    = dofile("./library/dkjson.lua")
+json    = dofile("./library/JSON.lua")
+URL     = dofile("./library/url.lua")
 http    = require("socket.http") 
 HTTPS   = require("ssl.https") 
 https   = require("ssl.https") 
