@@ -4,7 +4,7 @@
 --                - Antak -                 --
 --        -- https://t.me/CXRCX --         --
 ------------------------------------------------ 
-DevRio  = dofile("./libs/redis.lua").connect("127.0.0.1", 6379)
+DevRio  = dofile("./library/redis.lua").connect("127.0.0.1", 6379)
 serpent = dofile("./library/serpent.lua")
 JSON    = dofile("./library/dkjson.lua")
 json    = dofile("./library/JSON.lua")
