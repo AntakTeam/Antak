@@ -3621,7 +3621,7 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, o
 end
 --     Source Antak     --
 if text == "الالعاب المتطوره" or text == "الالعاب الاحترافيه" or text == "↫ الالعاب المتطوره ✯" then
-if not DevAbs:get(WaTaN2..'Abs:Lock:Gamesinline'..msg.chat_id_) then
+if not DevAbs:get(Antak..'Abs:Lock:Gamesinline'..msg.chat_id_) then
 Text =[[
 *✯︙قائمه الالعاب المتطوره اضغط للعب*
 ]]
