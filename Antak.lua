@@ -6140,19 +6140,24 @@ DevRio:set(Antak..'Rio:viewget'..msg.sender_user_id_,true)
 Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙حسنا قم باعادة توجيه للمنشور الذي تريدني حساب مشاهداته', 1, 'md')
 end
 --     Source Antak     --
-if text == "سورس" and SourceCh(msg) or text == "السورس" and SourceCh(msg) or text == "يا سورس" and SourceCh(msg) or text == "↫  السورس ᥀" and SourceCh(msg) then
-Text = [[
-Welcome To Source
-᥀︙[David Team](https://t.me/L9L9L)
-]]
+if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس' then
+local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+data = JSON.decode(url)
+if data.Ch_Member.Info_WaTaNTeaM ~= true then
+Dev_Abs(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
+return false 
+end
+Text = "[⦑ Welcome to Source ⦒](t.me/watanteam)\n[✯ ⦑ SOURCE WaTaN ⦒](t.me/watanteam)\n✯ Source version : 3.2"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '᥀ Source Channel',url="https://t.me/L9L9L"}},
-{{text = '᥀ Developer',url="t.me/tsttt"},{text = '᥀ Tws David',url="https://t.me/W555Bot"}},{{text= '᥀ Support Source .',url="https://t.me/joinchat/L980Ig8wQnAyN2Vi"}}
+{{text = '𝒄𝒉𝒂𝒏𝒏𝒆𝒍 𝒔𝒐𝒖𝒓𝒄𝒆',url="t.me/WaTaNTeaM"},
+{text = '𝒖𝒑𝒅𝒂𝒕𝒆 𝒔𝒐𝒖𝒓𝒄𝒆',url="t.me/watanupdate"}},
+{{text = '𝒊𝒏𝒔𝒕𝒂𝒍𝒍 𝒔𝒐𝒖𝒓𝒄𝒆',url="https://t.me/WaTaNTeaM/7"},
+{text = '𝒘𝒂𝒕𝒂𝒏 𝒈𝒓𝒐𝒖𝒑',url="https://t.me/joinchat/MJjy8Vab_jVmODdi"}},
+{{text = '𝒅𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓',url="t.me/abbasfadhil"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/X6UX6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-return false
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/WaTaNTeaM&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 --     Source Antak     --
 if ChatType == 'sp' or ChatType == 'gp'  then
