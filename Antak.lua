@@ -2188,7 +2188,7 @@ end
 --     Source Antak     --
 if DataText and DataText:match('/GameInline:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/GameInline:'..tonumber(data.sender_user_id_)..'(.*)')
-if not DevAbs:get(WaTaN2..'Abs:Lock:Gamesinline'..data.chat_id_) then
+if not DevAbs:get(Antak..'Abs:Lock:Gamesinline'..data.chat_id_) then
 Text =[[
 *✯︙قائمه الالعاب المتطوره اضغط للعب*
 ]]
