@@ -3575,10 +3575,10 @@ Start_Source = "᥀︙مرحبا انا بوت اسمي "..NameBot.."\n᥀︙ا�
 end 
 SendInline(msg.chat_id_,Start_Source,nil,inline)
 end,nil)
-end,nil)
 end
-DevAbs:setex(Antak..'Abs:Start:Time'..msg.sender_user_id_,300,true)
+DevRio:setex(Antak..'Rio:Start:Time'..msg.sender_user_id_,300,true)
 return false
+end 
 end 
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if not SecondSudo(msg) and not DevAbs:sismember(Antak..'Abs:Ban:Pv',msg.sender_user_id_) and not DevAbs:get(Antak..'Abs:Texting:Pv') then
