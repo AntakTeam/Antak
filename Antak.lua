@@ -3365,7 +3365,7 @@ end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if ChatType == 'pv' then 
 if text == '/start' or text == '↫ رجوع ✯' 
-then
+then 
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙مرحبا عزيزي المطور \n✯︙انت المطور الاساسي هنا \n✯︙اليك ازرار سورس وطن \n✯︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3563,19 +3563,15 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
-if text == '/start' then 
-if not DevAbs:get(Antak..'Abs:Start:Time'..msg.sender_user_id_) then
-tdcli_function({ID="GetUser",user_id_=DevId},function(arg,dp)
-tdcli_function({ID="GetUser",user_id_=Antak},function(arg,dpbot)
-local inline = {
-{{text="✯ المطور .",url="t.me/"..(dp.username_ or "BAANDDE")}},
-{{text="✯ السورس .",url="https://t.me/BAANDDE"},{text="✯ لتنصيب بوت .",url="https://t.me/BAANDDE/6109"}},{{text="✯ اضفني في مجموعتك .",url="t.me/"..dpbot.username_.."?startgroup=botstart"}}
-}
-local start = DevAbs:get(Antak.."Abs:Start:Bot")
+if text == '/start' and ChCheck(msg) then  
+if not DevRio:get(Antak..'Rio:Start:Time'..msg.sender_user_id_) then
+tdcli_function({ID="GetUser",user_id_=DevId},function(arg,dp) 
+local inline = {{{text="• ᥀ المطور . •",url="t.me/"..(dp.username_ or "TeAmAnTaK")}},{{text="• ᥀ السورس . •",url="https://t.me/CXRCX"},{text="• ᥀ لتنصيب بوت . •",url="https://t.me/S_X_X_G"}},{{text="• ᥀ اضفني في مجموعتك . •",url="t.me/"..dp.username_.."?startgroup=botstart"}}}
+local start = DevRio:get(Antak.."Rio:Start:Bot")
 if start then 
 Start_Source = start
 else
-Start_Source = "✯︙مرحبا انا بوت اسمي "..NameBot.."\n✯︙اختصاصي حماية المجموعات\n✯︙من التفليش والسبام والخخ .. . ،\n✯︙تفعيلي سهل ومجانا فقط قم برفعي ادمن في مجموعتك وارسل امر ↫ تفعيل\n✯︙سيتم رفع الادمنيه والمنشئ تلقائيا\n✯︙ارسل امر /free او /play للتمتع باوامر الاعضاء"
+Start_Source = "᥀︙مرحبا انا بوت اسمي "..NameBot.."\n᥀︙اختصاصي حماية المجموعات\n᥀︙من التفليش والسبام والخخ .. . ،\n᥀︙تفعيلي سهل ومجانا فقط قم برفعي ادمن في مجموعتك وارسل امر ↫ تفعيل\n᥀︙سيتم رفع الادمنيه والمنشئ تلقائيا\n᥀︙ارسل امر /free او /play للتمتع باوامر الاعضاء"
 end 
 SendInline(msg.chat_id_,Start_Source,nil,inline)
 end,nil)
