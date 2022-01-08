@@ -3363,14 +3363,8 @@ ChatType = 'gp'
 end
 end 
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
-if ChatType == 'pv' then 
-if text == '/start' or text == '↫ رجوع ✯' then 
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
+if ChatType == 'pv' then
+if text == '/start' or text == '↫ رجوع ✯' 
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙مرحبا عزيزي المطور \n✯︙انت المطور الاساسي هنا \n✯︙اليك ازرار سورس وطن \n✯︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3384,13 +3378,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ تعيين كلايش الاوامر ✯' then 
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
-if SecondSudo(msg) then 
+if SecondSudo(msg) then
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بتعديل وتغيير كلايش سورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'تغير معلومات الترحيب'},
@@ -3404,13 +3392,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ السورس ✯' then 
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
+if text == '↫ السورس ✯' then
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بتحديث  سورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3423,13 +3405,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ الاحصائيات ✯' then 
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
+if text == '↫ الاحصائيات ✯' then
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب أحصائيات  سورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3443,13 +3419,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫  المطورين ✯' then 
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
+if text == '↫  المطورين ✯' then
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب المطورين لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3462,13 +3432,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ التفعيل والتعطيل ✯' then 
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
+if text == '↫ التفعيل والتعطيل ✯' then
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب التفعيل والتعطيل لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3483,13 +3447,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ الاذاعه ✯' then 
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
+if text == '↫ الاذاعه ✯' then
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالاذاعه لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3502,13 +3460,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ العام ✯' then 
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
+if text == '↫ العام ✯' then
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالعام لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3520,13 +3472,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ ردود الخاص ✯' then 
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
+if text == '↫ ردود الخاص ✯' then
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بردود الخاص لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3537,13 +3483,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ الاشتراك الاجباري ✯' then 
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
+if text == '↫ الاشتراك الاجباري ✯' then
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالاشتراك الاجباري لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3557,12 +3497,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ الاوامر الخدميه ✯' or text == '/play' or text == '↫  رجوع  ✯' or text == 'اوامر الخدميه' or text == '/free' then
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ اوامر التسليه ✯','↫ الاوامر الخدميه  ✯'},
@@ -3574,13 +3508,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
-if text == '↫ اوامر التسليه ✯' then 
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
+if text == '↫ اوامر التسليه ✯' then
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بأوامر التسليه الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ غنيلي ✯','↫ اغنيه ✯'},
@@ -3592,13 +3520,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
-if text == '↫ الاوامر الخدميه  ✯' then 
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
+if text == '↫ الاوامر الخدميه  ✯' then
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ الابراج ✯','↫ حساب العمر ✯'},
@@ -3611,13 +3533,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
-if text == '↫ اوامر النسب ✯' then 
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
+if text == '↫ اوامر النسب ✯' then
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بأوامر النسب الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ نسبه الكره ✯','↫ نسبه الحب ✯'},
@@ -3629,13 +3545,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
-if text == '↫ العاب ✯' then 
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
+if text == '↫ العاب ✯' then
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بألعاب سورس وطن فقط اضغط على اللعبه الذي تريد لعبها'
 local key = {
 {'↫ الالعاب ✯','↫ الالعاب المتطوره ✯'},
@@ -3652,13 +3562,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
-if text == '/start' then  
-local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
+if text == '/start' then
 if not DevAbs:get(Antak..'Abs:Start:Time'..msg.sender_user_id_) then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,dp)
 tdcli_function({ID="GetUser",user_id_=Antak},function(arg,dpbot)
