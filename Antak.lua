@@ -3365,7 +3365,7 @@ end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if ChatType == 'pv' then 
 if text == '/start' or text == '↫ رجوع ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -3384,7 +3384,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ تعيين كلايش الاوامر ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -3405,7 +3405,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ السورس ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -3424,7 +3424,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ الاحصائيات ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -3444,7 +3444,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫  المطورين ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -3463,7 +3463,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ التفعيل والتعطيل ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -3484,7 +3484,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ الاذاعه ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -3503,7 +3503,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ العام ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -3521,7 +3521,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ ردود الخاص ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -3538,7 +3538,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ الاشتراك الاجباري ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -3557,7 +3557,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ الاوامر الخدميه ✯' or text == '/play' or text == '↫  رجوع  ✯' or text == 'اوامر الخدميه' or text == '/free' then
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -3575,7 +3575,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ اوامر التسليه ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -3593,7 +3593,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ الاوامر الخدميه  ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -3612,7 +3612,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ اوامر النسب ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -3630,7 +3630,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ العاب ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -3653,7 +3653,7 @@ return false
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == '/start' then  
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
@@ -6508,7 +6508,7 @@ return false
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس' then
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://api-antak.ml/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_AntakTeam ~= true then
 Dev_Abs(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
