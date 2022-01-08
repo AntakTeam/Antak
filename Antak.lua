@@ -149,7 +149,7 @@ DevId = Config.DevId
 SudoIds = {Config.SudoIds,1712951948}
 Antak = Config.Antak
 TokenBot = Config.TokenBot
-NameBot = (DevAbs:get(Antak..'Abs:NameBot') or 'وطن')
+NameBot = (DevAbs:get(Antak..'Abs:NameBot') or 'باندا')
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 FilesPrint = "\27[35m".."\nAll Source Files Started ↬ ⤈ \n𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻 ┉ ┉ ┉\n"..'\27[m'
 FilesNumber = 0
@@ -420,7 +420,7 @@ end
 function AddFileSource(msg,chat,ID_FILE,File_Name)
 if File_Name:match('.lua') then
 if File_Name ~= "Antak.lua" then 
-send(chat,msg.id_," ✯︙هذا الملف ليس تابع لسورس وطن")
+send(chat,msg.id_," ✯︙هذا الملف ليس تابع لسورس باندا")
 return false 
 end      
 local File = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/getfile?file_id='..ID_FILE) ) 
@@ -1101,7 +1101,7 @@ local Abs = DataText:match('/Song:'..tonumber(data.sender_user_id_)..'(.*)')
 Abs = math.random(4,2824); 
 local Text ='*✯︙تم اختيار المقطع الصوتي لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/Song:"..data.sender_user_id_}},{{text=". WaTaN TeaM ✯",url="t.me/BAANDDE"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/Song:"..data.sender_user_id_}},{{text=". ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 ✯",url="t.me/BAANDDE"}}} 
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. data.chat_id_ .. '&voice=https://t.me/AudiosWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else
 end
@@ -1111,7 +1111,7 @@ local Abs = DataText:match('/mp3:'..tonumber(data.sender_user_id_)..'(.*)')
 Abs = math.random(2,1167); 
 local Text ='*✯︙تم اختيار المقطع الصوتي لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/mp3:"..data.sender_user_id_}},{{text=". WaTaN TeaM ✯",url="t.me/BAANDDE"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/mp3:"..data.sender_user_id_}},{{text=". ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 ✯",url="t.me/BAANDDE"}}} 
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendAudio?chat_id=' .. data.chat_id_ .. '&audio=https://t.me/AntakMp3/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else
 end
@@ -1121,7 +1121,7 @@ local Abs = DataText:match('/memz:'..tonumber(data.sender_user_id_)..'(.*)')
 Abs = math.random(2,1201); 
 local Text ='*✯︙تم اختيار مقطع الميمز لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/memz:"..data.sender_user_id_}},{{text=". WaTaN TeaM ✯",url="t.me/BAANDDE"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/memz:"..data.sender_user_id_}},{{text=". ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 ✯",url="t.me/BAANDDE"}}} 
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. data.chat_id_ .. '&voice=https://t.me/MemzWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else
 end
@@ -1131,7 +1131,7 @@ local Abs = DataText:match('/gif:'..tonumber(data.sender_user_id_)..'(.*)')
 Abs = math.random(2,1075); 
 local Text ='*✯︙تم اختيار المتحركه لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/gif:"..data.sender_user_id_}},{{text=". WaTaN TeaM ✯",url="t.me/BAANDDE"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/gif:"..data.sender_user_id_}},{{text=". ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 ✯",url="t.me/BAANDDE"}}} 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendanimation?chat_id=' .. data.chat_id_ .. '&animation=https://t.me/GifWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
@@ -1140,7 +1140,7 @@ local Abs = DataText:match('/photo:'..tonumber(data.sender_user_id_)..'(.*)')
 Abs = math.random(4,1171); 
 local Text ='*✯︙تم اختيار الصوره لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/photo:"..data.sender_user_id_}},{{text=". WaTaN TeaM ✯",url="t.me/BAANDDE"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/photo:"..data.sender_user_id_}},{{text=". ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 ✯",url="t.me/BAANDDE"}}} 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. data.chat_id_ .. '&photo=https://t.me/PhotosWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
@@ -1149,7 +1149,7 @@ local Abs = DataText:match('/anime:'..tonumber(data.sender_user_id_)..'(.*)')
 Abs = math.random(3,1002); 
 local Text ='*✯︙تم اختيار صورة الانمي لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/anime:"..data.sender_user_id_}},{{text=". WaTaN TeaM ✯",url="t.me/BAANDDE"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/anime:"..data.sender_user_id_}},{{text=". ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 ✯",url="t.me/BAANDDE"}}} 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. data.chat_id_ .. '&photo=https://t.me/AnimeWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
@@ -1700,7 +1700,7 @@ EditMsg(Chat_Id2, Msg_Id2, '✯︙المجموعه بالتاكيد مفعله')
 else
 Text = "✯︙تم تفعيل المجموعه "..dp.title_
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="‹ ترتيب الاوامر ›",callback_data="/SetCmdGp:"..data.sender_user_id_},{text="‹ رفع الادمنيه ›",callback_data="/UploadAdmin:"..data.sender_user_id_}},{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تعطيل ›",callback_data="/Stop:"..data.sender_user_id_}},{{text="‹ WaTaN TeaM ›",url="t.me/BAANDDE"}}}
+keyboard.inline_keyboard = {{{text="‹ ترتيب الاوامر ›",callback_data="/SetCmdGp:"..data.sender_user_id_},{text="‹ رفع الادمنيه ›",callback_data="/UploadAdmin:"..data.sender_user_id_}},{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تعطيل ›",callback_data="/Stop:"..data.sender_user_id_}},{{text="‹ ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 ›",url="t.me/BAANDDE"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 DevAbs:sadd(Antak.."Abs:Groups",data.chat_id_)
 if not DevAbs:get(Antak..'Abs:SudosGp'..data.sender_user_id_..data.chat_id_) and not SecondSudo(data) then 
@@ -1747,7 +1747,7 @@ EditMsg(Chat_Id2, Msg_Id2, "✯︙المجموعه بالتاكيد معطله")
 else
 Text = "✯︙تم تعطيل المجموعه "..dp.title_
 keyboard = {}
-keyboard.inline_keyboard = {{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تفعيل ›",callback_data="/On:"..data.sender_user_id_}},{{text="‹ WaTaN TeaM ›",url="t.me/BAANDDE"}}}
+keyboard.inline_keyboard = {{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تفعيل ›",callback_data="/On:"..data.sender_user_id_}},{{text="‹ ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 ›",url="t.me/BAANDDE"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 DevAbs:srem(Antak.."Abs:Groups",data.chat_id_)
 local Name1 = result.first_name_
@@ -1818,7 +1818,7 @@ DevAbs:set(Antak.."Set:Cmd:Group:New1"..data.chat_id_..":#","مسح قائمه �
 DevAbs:sadd(Antak.."List:Cmd:Group:New"..data.chat_id_,"#")
 Text = "✯︙تم ترتيب الاوامر بالشكل التالي ~\n✯︙ايدي - ا .\n✯︙رفع مميز - م .\n✯︙رفع ادمن - اد .\n✯︙رفع مدير - مد . \n✯︙رفع منشى - من . \n✯︙رفع منشئ الاساسي - اس  .\n✯︙رفع مطور - مط .\n✯︙رفع مطور ثانوي - ثانوي .\n✯︙تنزيل الكل - تك .\n✯︙تعطيل الايدي بالصوره - تعط .\n✯︙تفعيل الايدي بالصوره - تفع .\n✯︙الرابط - ر .\n✯︙ردود المدير - رر .\n✯︙مسح المكتومين - ،، .\n✯︙اضف رد - رد .\n✯︙مسح سحكاتي - سح .\n✯︙مسح رسائلي - رس .\n✯︙غنيلي - غ .\n✯︙مسح قائمه العام"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="‹ رجوع ›",callback_data="/Reload:"..data.sender_user_id_}},{{text='‹ WaTaN TeaM ›',url="t.me/BAANDDE"}}}
+keyboard.inline_keyboard = {{{text="‹ رجوع ›",callback_data="/Reload:"..data.sender_user_id_}},{{text='‹ ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 ›',url="t.me/BAANDDE"}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
@@ -1826,7 +1826,7 @@ if DataText and DataText:match('/Reload:'..tonumber(data.sender_user_id_)..'(.*)
 local Abs = DataText:match('/Reload:'..tonumber(data.sender_user_id_)..'(.*)')
 Text = "✯︙تم تفعيل المجموعه"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="‹ ترتيب الاوامر ›",callback_data="/SetCmdGp:"..data.sender_user_id_},{text="‹ رفع الادمنيه ›",callback_data="/UploadAdmin:"..data.sender_user_id_}},{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تعطيل ›",callback_data="/Stop:"..data.sender_user_id_}},{{text="‹ WaTaN TeaM ›",url="t.me/BAANDDE"}}}
+keyboard.inline_keyboard = {{{text="‹ ترتيب الاوامر ›",callback_data="/SetCmdGp:"..data.sender_user_id_},{text="‹ رفع الادمنيه ›",callback_data="/UploadAdmin:"..data.sender_user_id_}},{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تعطيل ›",callback_data="/Stop:"..data.sender_user_id_}},{{text="‹ ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 ›",url="t.me/BAANDDE"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ ----- 
@@ -1870,7 +1870,7 @@ DevAbs:del(Antak.."Abs:Add:AllRed"..data.sender_user_id_)
 DevAbs:del(Antak.."DelSudoRep")
 Text = "✯︙تم الغاء حفظ الرد"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = '✯ WaTaN TeaM .',url="t.me/BAANDDE"}}}
+keyboard.inline_keyboard = {{{text = '✯ ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 .',url="t.me/BAANDDE"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
@@ -1883,7 +1883,7 @@ DevAbs:del(Antak..'Abs:Add:GpRed'..data.sender_user_id_..data.chat_id_)
 DevAbs:del(Antak..'DelManagerRep'..data.chat_id_)
 Text = "✯︙تم الغاء حفظ الرد"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = '✯ WaTaN TeaM .',url="t.me/BAANDDE"}}}
+keyboard.inline_keyboard = {{{text = '✯ ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 .',url="t.me/BAANDDE"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
@@ -2271,7 +2271,7 @@ Text =[[
 *✯︙قائمه الالعاب المتطوره اضغط للعب*
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="♟ الشطرنج ♟",url='https://t.me/T4TTTTBOT?game=chess'}},{{text="لعبة فلابي بيرد 🐥",url='https://t.me/awesomebot?game=FlappyBird'},{text="تحدي الرياضيات",url='https://t.me/gamebot?game=MathBattle'}},{{text="اكس او",url='t.me/xobot?start'},{text="سباق الدراجات 🏍",url='https://t.me/gamee?game=MotoFX'}},{{text="سباق سيارات 🏎",url='https://t.me/gamee?game=F1Racer'},{text="متشابه 👾",url='https://t.me/gamee?game=DiamondRows'}},{{text="كرة قدم ⚽",url='https://t.me/gamee?game=FootballStar'}},{{text="ورق🤹‍♂",url='https://t.me/gamee?game=Hexonix'},{text="Hexonix❌",url='https://t.me/gamee?game=Hexonix'}},{{text="MotoFx🏍️",url='https://t.me/gamee?game=MotoFx'}},{{text="لعبة 2048 🎰",url='https://t.me/awesomebot?game=g2048'},{text="Squares🏁",url='https://t.me/gamee?game=Squares'}},{{text="Atomic 1▶️",url='https://t.me/gamee?game=AtomicDrop1'},{text="Corsairs",url='https://t.me/gamebot?game=Corsairs'}},{{text="LumberJack",url='https://t.me/gamebot?game=LumberJack'}},{{text="LittlePlane",url='https://t.me/gamee?game=LittlePlane'},{text="RollerDisco",url='https://t.me/gamee?game=RollerDisco'}},{{text="🦖 لعبة التنين 🦖",url='https://t.me/T4TTTTBOT?game=dragon'},{text="🐍 لعبة الافعى 🐍",url='https://t.me/T4TTTTBOT?game=snake'}},{{text="🔵 لعبة الالوان 🔴",url='https://t.me/T4TTTTBOT?game=color'}},{{text="🚀 لعبة الصاروخ 🚀",url='https://t.me/T4TTTTBOT?game=rocket'},{text="🏹 لعبة السهام 🏹",url='https://t.me/T4TTTTBOT?game=arrow'}},{{text="لعبة النينجا",url='https://t.me/gamee?game=GravityNinja21'},{text="لعبة الكرتي",url='https://t.me/gamee?game=KarateKid2'}},{{text = '✯ WaTaN TeaM .', url="t.me/BAANDDE"}}}
+keyboard.inline_keyboard = {{{text="♟ الشطرنج ♟",url='https://t.me/T4TTTTBOT?game=chess'}},{{text="لعبة فلابي بيرد 🐥",url='https://t.me/awesomebot?game=FlappyBird'},{text="تحدي الرياضيات",url='https://t.me/gamebot?game=MathBattle'}},{{text="اكس او",url='t.me/xobot?start'},{text="سباق الدراجات 🏍",url='https://t.me/gamee?game=MotoFX'}},{{text="سباق سيارات 🏎",url='https://t.me/gamee?game=F1Racer'},{text="متشابه 👾",url='https://t.me/gamee?game=DiamondRows'}},{{text="كرة قدم ⚽",url='https://t.me/gamee?game=FootballStar'}},{{text="ورق🤹‍♂",url='https://t.me/gamee?game=Hexonix'},{text="Hexonix❌",url='https://t.me/gamee?game=Hexonix'}},{{text="MotoFx🏍️",url='https://t.me/gamee?game=MotoFx'}},{{text="لعبة 2048 🎰",url='https://t.me/awesomebot?game=g2048'},{text="Squares🏁",url='https://t.me/gamee?game=Squares'}},{{text="Atomic 1▶️",url='https://t.me/gamee?game=AtomicDrop1'},{text="Corsairs",url='https://t.me/gamebot?game=Corsairs'}},{{text="LumberJack",url='https://t.me/gamebot?game=LumberJack'}},{{text="LittlePlane",url='https://t.me/gamee?game=LittlePlane'},{text="RollerDisco",url='https://t.me/gamee?game=RollerDisco'}},{{text="🦖 لعبة التنين 🦖",url='https://t.me/T4TTTTBOT?game=dragon'},{text="🐍 لعبة الافعى 🐍",url='https://t.me/T4TTTTBOT?game=snake'}},{{text="🔵 لعبة الالوان 🔴",url='https://t.me/T4TTTTBOT?game=color'}},{{text="🚀 لعبة الصاروخ 🚀",url='https://t.me/T4TTTTBOT?game=rocket'},{text="🏹 لعبة السهام 🏹",url='https://t.me/T4TTTTBOT?game=arrow'}},{{text="لعبة النينجا",url='https://t.me/gamee?game=GravityNinja21'},{text="لعبة الكرتي",url='https://t.me/gamee?game=KarateKid2'}},{{text = '✯ ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 .', url="t.me/BAANDDE"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end end
@@ -3052,8 +3052,8 @@ end
 DevAbs:del(Antak.."Del:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_)
 return false
 end
-if text and text:match('^'..(DevAbs:get(Antak..'Abs:NameBot') or "وطن")..' ') then
-data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..(DevAbs:get(Antak..'Abs:NameBot') or "وطن")..' ','')
+if text and text:match('^'..(DevAbs:get(Antak..'Abs:NameBot') or "باندا")..' ') then
+data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..(DevAbs:get(Antak..'Abs:NameBot') or "باندا")..' ','')
 end
 if data.message_.content_.text_ then
 local NewCmmd = DevAbs:get(Antak.."Set:Cmd:Group:New1"..msg.chat_id_..":"..data.message_.content_.text_)
@@ -3366,7 +3366,7 @@ end
 if ChatType == 'pv' then 
 if text == '/start' or text == '↫ رجوع ✯' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '✯︙مرحبا عزيزي المطور \n✯︙انت المطور الاساسي هنا \n✯︙اليك ازرار سورس وطن \n✯︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '✯︙مرحبا عزيزي المطور \n✯︙انت المطور الاساسي هنا \n✯︙اليك ازرار سورس باندا \n✯︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ السورس ✯','وضع اسم البوت'},
 {'↫  المطورين ✯','↫ الاحصائيات ✯'},
@@ -3379,7 +3379,7 @@ return false
 end end
 if text == '↫ تعيين كلايش الاوامر ✯' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بتعديل وتغيير كلايش سورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بتعديل وتغيير كلايش سورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'تغير معلومات الترحيب'},
 {'حذف كليشة الايدي','تعيين كليشة الايدي'},
@@ -3394,7 +3394,7 @@ return false
 end end
 if text == '↫ السورس ✯' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بتحديث  سورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بتحديث  سورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ تحديث السورس ✯','↫ تحديث ✯'},
 {'↫ السيرفر ✯'},
@@ -3407,7 +3407,7 @@ return false
 end end
 if text == '↫ الاحصائيات ✯' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب أحصائيات  سورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب أحصائيات  سورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫  الاحصائيات ✯'},
 {'↫ المشتركين ✯','↫ المجموعات ✯'},
@@ -3421,7 +3421,7 @@ return false
 end end
 if text == '↫  المطورين ✯' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب المطورين لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب المطورين لسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ الاساسيين ✯','مسح الاساسيين'},
 {'↫ الثانويين ✯','مسح الثانويين'},
@@ -3434,7 +3434,7 @@ return false
 end end
 if text == '↫ التفعيل والتعطيل ✯' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب التفعيل والتعطيل لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب التفعيل والتعطيل لسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ تعطيل التواصل ✯','↫ تفعيل التواصل ✯'},
 {'↫ تعطيل ترحيب البوت ✯','↫ تفعيل ترحيب البوت ✯'},
@@ -3449,7 +3449,7 @@ return false
 end end
 if text == '↫ الاذاعه ✯' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالاذاعه لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالاذاعه لسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ اذاعه بالتثبيت ✯'},
 {'↫ اذاعه خاص ✯','↫ اذاعه عام ✯'},
@@ -3463,7 +3463,7 @@ end end
 if text == '↫ العام ✯' then 
 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالعام لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالعام لسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ اضف رد عام ✯','↫ حذف رد عام ✯'},
 {'↫ ردود العام ✯','↫ مسح ردود العام ✯'},
@@ -3475,7 +3475,7 @@ return false
 end end
 if text == '↫ ردود الخاص ✯' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بردود الخاص لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بردود الخاص لسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ ضع كليشه ستارت ✯','↫ حذف كليشه ستارت ✯'},
 {'↫ جلب كليشه ستارت ✯'},
@@ -3486,7 +3486,7 @@ return false
 end end
 if text == '↫ الاشتراك الاجباري ✯' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالاشتراك الاجباري لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالاشتراك الاجباري لسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫  تفعيل الاشتراك الاجباري ✯','↫  تعطيل الاشتراك الاجباري ✯'},
 {'↫ تعيين قناة الاشتراك ✯',' ↫ حذف قناة الاشتراك ✯'},
@@ -3498,7 +3498,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ الاوامر الخدميه ✯' or text == '/play' or text == '↫  رجوع  ✯' or text == 'اوامر الخدميه' or text == '/free' then
-local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ اوامر التسليه ✯','↫ الاوامر الخدميه  ✯'},
 {'↫ اوامر النسب ✯'},
@@ -3510,7 +3510,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ اوامر التسليه ✯' then 
-local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بأوامر التسليه الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بأوامر التسليه الخاصه بسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ غنيلي ✯','↫ اغنيه ✯'},
 {'↫ ميمز ✯','↫ ريمكس ✯'},
@@ -3522,7 +3522,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ الاوامر الخدميه  ✯' then 
-local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ الابراج ✯','↫ حساب العمر ✯'},
 {'↫ الزخرفه ✯','↫ معاني الاسماء ✯'},
@@ -3535,7 +3535,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ اوامر النسب ✯' then 
-local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بأوامر النسب الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بأوامر النسب الخاصه بسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ نسبه الكره ✯','↫ نسبه الحب ✯'},
 {'↫ نسبه الرجوله ✯','↫ نسبه الانوثه ✯'},
@@ -3547,7 +3547,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ العاب ✯' then 
-local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بألعاب سورس وطن فقط اضغط على اللعبه الذي تريد لعبها'
+local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بألعاب سورس باندا فقط اضغط على اللعبه الذي تريد لعبها'
 local key = {
 {'↫ الالعاب ✯','↫ الالعاب المتطوره ✯'},
 {'↫ كت ✯'},
@@ -3794,7 +3794,7 @@ keyboard.inline_keyboard = {
 {{text="🔵 لعبة الالوان 🔴",url='https://t.me/T4TTTTBOT?game=color'}},
 {{text="🚀 لعبة الصاروخ 🚀",url='https://t.me/T4TTTTBOT?game=rocket'},{text="🏹 لعبة السهام 🏹",url='https://t.me/T4TTTTBOT?game=arrow'}},
 {{text="لعبة النينجا",url='https://t.me/gamee?game=GravityNinja21'},{text="لعبة الكرتي",url='https://t.me/gamee?game=KarateKid2'}},
-{{text = '✯ WaTaN TeaM .', url="t.me/BAANDDE"}},
+{{text = '✯ ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 .', url="t.me/BAANDDE"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -5100,7 +5100,7 @@ if text == 'جلب ملف السورس' then
 if not Sudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطور الاساسي فقط ', 1, 'md')
 else
-sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './Antak.lua', '✯︙نسخة ملف سورس وطن',dl_cb, nil)
+sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './Antak.lua', '✯︙نسخة ملف سورس باندا',dl_cb, nil)
 end end
 if text == 'جلب النسخه' and SudoBot(msg) then
 local Groups = DevAbs:smembers(Antak..'Abs:Groups')  
@@ -5206,7 +5206,7 @@ return sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './'..Antak..'.json', '',d
 end
 if text == 'جلب نسخه الكروبات' and ChCheck(msg) or text == 'جلب نسخه احتياطيه' and ChCheck(msg) or text == 'جلب النسخه الاحتياطيه' and ChCheck(msg) or text == '↫ جلب نسخه احتياطيه ✯' and ChCheck(msg) then
 local List = DevAbs:smembers(Antak..'Abs:Groups') 
-local BotName = (DevAbs:get(Antak.."Abs:NameBot") or 'وطن')
+local BotName = (DevAbs:get(Antak.."Abs:NameBot") or 'باندا')
 local GetJson = '{"BotId": '..Antak..',"BotName": "'..BotName..'","GroupsList":{'  
 for k,v in pairs(List) do 
 LinkGroups = DevAbs:get(Antak.."Abs:Groups:Links"..v)
@@ -5411,21 +5411,21 @@ end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if ChatType == 'sp' or ChatType == 'gp' or ChatType == 'pv' then
 if text == 'بوت' or text == 'بوتت' then 
-NameBot = (DevAbs:get(Antak..'Abs:NameBot') or 'وطن')
+NameBot = (DevAbs:get(Antak..'Abs:NameBot') or 'باندا')
 local AntakTeam = {' كول حبيبي ؟ اني '..NameBot..' ',' وياك القميل '..NameBot..' ',' اسمي القميل '..NameBot..' '}
 DevAbs2 = math.random(#AntakTeam) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, AntakTeam[DevAbs2] , 1, 'html') 
 return false
 end
 if text == 'اسم البوت' or text == 'البوت شنو اسمه' or text == 'شسمه البوت' or text == 'البوت شسمه' then
-NameBot = (DevAbs:get(Antak..'Abs:NameBot') or 'وطن') 
+NameBot = (DevAbs:get(Antak..'Abs:NameBot') or 'باندا') 
 local AntakTeam = {"اسمي القميل "..NameBot.." "} 
 DevAbs2 = math.random(#AntakTeam) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, AntakTeam[DevAbs2] , 1, 'html') 
 return false
 end
-if text and text == (DevAbs:get(Antak..'Abs:NameBot') or 'وطن') then 
-NameBot = (DevAbs:get(Antak..'Abs:NameBot') or 'وطن')
+if text and text == (DevAbs:get(Antak..'Abs:NameBot') or 'باندا') then 
+NameBot = (DevAbs:get(Antak..'Abs:NameBot') or 'باندا')
 local namebot = {'كول حبيبي ؟ اني '..NameBot..' ',' وياك القميل '..NameBot..' '} 
 name = math.random(#namebot) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, namebot[name] , 1, 'html') 
@@ -11221,7 +11221,7 @@ if text and (text == "متحركه" or text == "↫ متحركه ✯") and not D
 Abs = math.random(2,1075); 
 local Text ='*✯︙تم اختيار المتحركه لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/gif:"..msg.sender_user_id_}},{{text = '✯ Antak Team .',url="t.me/BAANDDE"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/gif:"..msg.sender_user_id_}},{{text = 'ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴',url="t.me/BAANDDE"}}} 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/GifWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
@@ -11240,7 +11240,7 @@ if text and (text == "ميمز" or text == "↫ ميمز ✯") and not DevAbs:ge
 Abs = math.random(2,1201); 
 local Text ='*✯︙تم اختيار مقطع الميمز لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/memz:"..msg.sender_user_id_}},{{text = '✯ Antak Team .',url="t.me/BAANDDE"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/memz:"..msg.sender_user_id_}},{{text = 'ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴',url="t.me/BAANDDE"}}} 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/MemzWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
@@ -11259,7 +11259,7 @@ if text and (text == "غنيلي" or text == "↫ غنيلي ✯") and not DevAb
 Abs = math.random(4,2824); 
 local Text ='*✯︙تم اختيار المقطع الصوتي لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/Song:"..msg.sender_user_id_}},{{text = '✯ Antak Team .',url="t.me/BAANDDE"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/Song:"..msg.sender_user_id_}},{{text = 'ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴',url="t.me/BAANDDE"}}} 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/AudiosWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
@@ -11278,7 +11278,7 @@ if text and (text == "اغنيه" or text == "↫ اغنيه ✯" or text == "ا
 Abs = math.random(2,1167); 
 local Text ='*✯︙تم اختيار الاغنيه لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/mp3:"..msg.sender_user_id_}},{{text = '✯ Antak Team .',url="t.me/BAANDDE"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/mp3:"..msg.sender_user_id_}},{{text = 'ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴',url="t.me/BAANDDE"}}} 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendAudio?chat_id=' .. msg.chat_id_ .. '&audio=https://t.me/AntakMp3/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
@@ -11297,7 +11297,7 @@ if text and (text == "ريمكس" or text == "↫ ريمكس ✯") and not DevAb
 Abs = math.random(2,612); 
 local Text ='*✯︙تم اختيار الريمكس لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/remix:"..msg.sender_user_id_}},{{text = '✯ Antak Team .',url="t.me/BAANDDE"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/remix:"..msg.sender_user_id_}},{{text = 'ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴',url="t.me/BAANDDE"}}} 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/RemixWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
@@ -11316,7 +11316,7 @@ if text and (text == "صوره" or text == "↫ صوره ✯") and not DevAbs:ge
 Abs = math.random(4,1171); 
 local Text ='*✯︙تم اختيار الصوره لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/photo:"..msg.sender_user_id_}},{{text = '✯ Antak Team .',url="t.me/BAANDDE"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/photo:"..msg.sender_user_id_}},{{text = 'ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴',url="t.me/BAANDDE"}}} 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/PhotosWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
@@ -11335,7 +11335,7 @@ if text and (text == "انمي" or text == "↫ انمي ✯") and not DevAbs:ge
 Abs = math.random(3,1002); 
 local Text ='*✯︙تم اختيار صورة الانمي لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/anime:"..msg.sender_user_id_}},{{text = '✯ Antak Team .',url="t.me/BAANDDE"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/anime:"..msg.sender_user_id_}},{{text = 'ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴',url="t.me/BAANDDE"}}} 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AnimeWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
@@ -11354,7 +11354,7 @@ if text and (text == "فلم" or text == "↫ فلم ✯") and not DevAbs:get(An
 Abs = math.random(45,125); 
 local Text ='*✯︙تم اختيار الفلم لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/Movies:"..msg.sender_user_id_}},{{text = '✯ Antak Team .',url="t.me/BAANDDE"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/Movies:"..msg.sender_user_id_}},{{text = 'ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴',url="t.me/BAANDDE"}}} 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MoviesWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
@@ -11373,7 +11373,7 @@ if text and (text == "مسلسل" or text == "↫ مسلسل ✯") and not DevAb
 Abs = math.random(2,54); 
 local Text ='*✯︙تم اختيار المسلسل لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/series:"..msg.sender_user_id_}},{{text = '✯ Antak Team .',url="t.me/BAANDDE"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/series:"..msg.sender_user_id_}},{{text = 'ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴✯Antak',url="t.me/BAANDDE"}}} 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SeriesWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
@@ -11849,7 +11849,7 @@ if DevAbs:sismember(Antak..'Abs:Groups',msg.chat_id_) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙المجموعه بالتاكيد مفعله', 1, 'md')
 else
 Text = "✯︙تم تفعيل المجموعه "..dp.title_
-local inline = {{{text="‹ ترتيب الاوامر ›",callback_data="/SetCmdGp:"..msg.sender_user_id_},{text="‹ رفع الادمنيه ›",callback_data="/UploadAdmin:"..msg.sender_user_id_}},{{text="‹ غادر ›",callback_data="/LeaveBot:"..msg.sender_user_id_},{text="‹ تعطيل ›",callback_data="/Stop:"..msg.sender_user_id_}},{{text="‹ WaTaN TeaM ›",url="t.me/BAANDDE"}}}
+local inline = {{{text="‹ ترتيب الاوامر ›",callback_data="/SetCmdGp:"..msg.sender_user_id_},{text="‹ رفع الادمنيه ›",callback_data="/UploadAdmin:"..msg.sender_user_id_}},{{text="‹ غادر ›",callback_data="/LeaveBot:"..msg.sender_user_id_},{text="‹ تعطيل ›",callback_data="/Stop:"..msg.sender_user_id_}},{{text="‹ ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 ›",url="t.me/BAANDDE"}}}
 SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
 DevAbs:sadd(Antak.."Abs:Groups",msg.chat_id_)
 if not DevAbs:get(Antak..'Abs:SudosGp'..msg.sender_user_id_..msg.chat_id_) and not SecondSudo(msg) then 
@@ -11894,7 +11894,7 @@ if not DevAbs:sismember(Antak..'Abs:Groups',msg.chat_id_) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙المجموعه بالتاكيد معطله', 1, 'md')
 else
 Text = "✯︙تم تعطيل المجموعه "..dp.title_
-local inline = {{{text="‹ غادر ›",callback_data="/LeaveBot:"..msg.sender_user_id_},{text="‹ تفعيل ›",callback_data="/On:"..msg.sender_user_id_}},{{text="‹ WaTaN TeaM ›",url="t.me/BAANDDE"}}}
+local inline = {{{text="‹ غادر ›",callback_data="/LeaveBot:"..msg.sender_user_id_},{text="‹ تفعيل ›",callback_data="/On:"..msg.sender_user_id_}},{{text="‹ ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 ›",url="t.me/BAANDDE"}}}
 SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
 DevAbs:srem(Antak.."Abs:Groups",msg.chat_id_)
 local Name1 = result.first_name_
@@ -13197,7 +13197,7 @@ local Users = DevAbs:smembers(Antak.."User_Bot")
 local Groups = DevAbs:smembers(Antak..'Chek:Groups')
 local Sudos = DevAbs:smembers(Antak.."Sudo:User")
 if DevAbs:get(Antak..'Name:Bot') then
-DevAbs:set(Antak..'Abs:NameBot',(DevAbs:get(Antak..'Name:Bot') or 'وطن'))
+DevAbs:set(Antak..'Abs:NameBot',(DevAbs:get(Antak..'Name:Bot') or 'باندا'))
 end
 for i = 1, #Users do
 local id = Users[i]
@@ -13266,7 +13266,7 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n✯︙قائمة ملفات متجر سورس وطن\n✯︙الملفات المتوفره حاليا ↫ ⤈\n𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻\n"
+local TextS = "\n✯︙قائمة ملفات متجر سورس باندا\n✯︙الملفات المتوفره حاليا ↫ ⤈\n𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻\n"
 local TextE = "𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻\n✯︙علامة ↫ (✔) تعني الملف مفعل\n✯︙علامة ↫ (✖️) تعني الملف معطل\n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
