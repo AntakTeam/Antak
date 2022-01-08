@@ -3378,12 +3378,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ تعيين كلايش الاوامر ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بتعديل وتغيير كلايش سورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3399,12 +3393,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ السورس ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بتحديث  سورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3418,12 +3406,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ الاحصائيات ✯' then 
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب أحصائيات  سورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3438,7 +3420,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫  المطورين ✯' then 
-
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب المطورين لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3452,7 +3433,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ التفعيل والتعطيل ✯' then 
-
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب التفعيل والتعطيل لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3468,7 +3448,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ الاذاعه ✯' then 
-
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالاذاعه لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3495,7 +3474,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ ردود الخاص ✯' then 
-
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بردود الخاص لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3507,7 +3485,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ الاشتراك الاجباري ✯' then 
-
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالاشتراك الاجباري لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3521,7 +3498,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ الاوامر الخدميه ✯' or text == '/play' or text == '↫  رجوع  ✯' or text == 'اوامر الخدميه' or text == '/free' then
-
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ اوامر التسليه ✯','↫ الاوامر الخدميه  ✯'},
@@ -3534,7 +3510,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ اوامر التسليه ✯' then 
-
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بأوامر التسليه الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ غنيلي ✯','↫ اغنيه ✯'},
@@ -3547,7 +3522,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ الاوامر الخدميه  ✯' then 
-
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ الابراج ✯','↫ حساب العمر ✯'},
@@ -3561,7 +3535,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ اوامر النسب ✯' then 
-
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بأوامر النسب الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ نسبه الكره ✯','↫ نسبه الحب ✯'},
@@ -3574,7 +3547,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ العاب ✯' then 
-
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بألعاب سورس وطن فقط اضغط على اللعبه الذي تريد لعبها'
 local key = {
 {'↫ الالعاب ✯','↫ الالعاب المتطوره ✯'},
