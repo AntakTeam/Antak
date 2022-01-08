@@ -13261,7 +13261,7 @@ end
 send(msg.chat_id_, msg.id_,Files)
 end
 if text == "متجر الملفات" and SecondSudo(msg) and ChCheck(msg) or text == 'المتجر' and ChCheck(msg) and SecondSudo(msg) or text == '↫  المتجر ✯' and ChCheck(msg) and SecondSudo(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/AntakTeam/AntakFiles/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
