@@ -1023,20 +1023,20 @@ if DataText and DataText:match(tonumber(data.sender_user_id_)..'dl:id/(.*)') the
 local Url = DataText:match(tonumber(data.sender_user_id_)..'dl:id/(.*)')
 https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✯ جار تحميل النتائج يرجى الانتظار .. .")..'&show_alert=true')
 DeleteMessage(Chat_Id2,{[0] = MsgId2})
-https.request('https://ccccxcc.ml/Antak/Yt.php?Put=Photo&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&UserId='..data.sender_user_id_..'&Url='..Url..'&Name='..DirName)
+https.request('https://vvvzvv.ml/Ali/searchinbot.php?Put=Photo&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&UserId='..data.sender_user_id_..'&Url='..Url..'&Name='..DirName)
 elseif DataText and DataText:match(tonumber(data.sender_user_id_)..'dl:vi/(.*)') then
 local Url = DataText:match(tonumber(data.sender_user_id_)..'dl:vi/(.*)')
 https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✯ جار تحميل النتائج يرجى الانتظار .. .")..'&show_alert=true')
-https.request('https://ccccxcc.ml/Antak/Yt.php?Put=Video&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&Url='..Url..'&Name='..DirName)
+https.request('https://vvvzvv.ml/Ali/searchinbot.php?Put=Video&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&Url='..Url..'&Name='..DirName)
 elseif DataText and DataText:match(tonumber(data.sender_user_id_)..'dl:au/(.*)') then
 local Url = DataText:match(tonumber(data.sender_user_id_)..'dl:au/(.*)')
 https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✯ جار تحميل النتائج يرجى الانتظار .. .")..'&show_alert=true')
-https.request('https://ccccxcc.ml/Antak/Yt.php?Put=Audio&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&Url='..Url..'&Name='..DirName)
+https.request('https://vvvzvv.ml/Ali/searchinbot.php?Put=Audio&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&Url='..Url..'&Name='..DirName)
 elseif DataText and DataText:match(tonumber(data.sender_user_id_)..'dl:vo/(.*)') then
 local Url = DataText:match(tonumber(data.sender_user_id_)..'dl:vo/(.*)')
 https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✯ جار تحميل النتائج يرجى الانتظار .. .")..'&show_alert=true')
 DeleteMessage(Chat_Id2,{[0] = MsgId2})
-https.request('https://ccccxcc.ml/Antak/Yt.php?Put=Voice&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&Url='..Url..'&Name='..DirName)
+https.request('https://vvvzvv.ml/Ali/searchinbot.php?Put=Voice&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&Url='..Url..'&Name='..DirName)
 end
 if DataText and DataText:match('/DelRed:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/DelRed:'..tonumber(data.sender_user_id_)..'(.*)')
