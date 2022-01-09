@@ -13245,7 +13245,7 @@ end
 send(msg.chat_id_, msg.id_,Files)
 end
 if text == "متجر الملفات" and SecondSudo(msg) and ChCheck(msg) or text == 'المتجر' and ChCheck(msg) and SecondSudo(msg) or text == '↫  المتجر ✯' and ChCheck(msg) and SecondSudo(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/AntakTeam/WaTaN2Files/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/AntakTeam/AntakFiles/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -13277,7 +13277,7 @@ end
 if text and text:match("^(تعطيل ملف) (.*)(.lua)$") and ChCheck(msg) and SecondSudo(msg) then
 local FileGet = {string.match(text, "^(تعطيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
-local GetJson, Res = https.request("https://raw.githubusercontent.com/AntakTeam/WaTaN2Files/main/WaTaN2Files/"..FileName)
+local GetJson, Res = https.request("https://raw.githubusercontent.com/AntakTeam/AntakFiles/main/AntakFiles/"..FileName)
 if Res == 200 then
 os.execute("rm -fr Files/"..FileName)
 send(msg.chat_id_, msg.id_,"\n✯︙الملف ↫ *"..FileName.."*\n✯︙تم تعطيله وحذفه من البوت بنجاح") 
@@ -13289,13 +13289,13 @@ end
 if text and text:match("^(تفعيل ملف) (.*)(.lua)$") and ChCheck(msg) and SecondSudo(msg) then
 local FileGet = {string.match(text, "^(تفعيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
-local GetJson, Res = https.request("https://raw.githubusercontent.com/AntakTeam/WaTaN2Files/main/WaTaN2Files/"..FileName)
+local GetJson, Res = https.request("https://raw.githubusercontent.com/AntakTeam/AntakFiles/main/AntakFiles/"..FileName)
 if Res == 200 then
 local ChekAuto = io.open("Files/"..FileName,'w+')
 ChekAuto:write(GetJson)
 ChekAuto:close()
 send(msg.chat_id_, msg.id_,"\n✯︙الملف ↫ *"..FileName.."*\n✯︙تم تفعيله في البوت بنجاح") 
-dofile('WaTaN2.lua')  
+dofile('Antak.lua')  
 else
 send(msg.chat_id_, msg.id_,"✯︙لا يوجد ملف بهذا الاسم") 
 end
