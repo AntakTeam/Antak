@@ -1,7 +1,7 @@
 ----- لم ولن ابرئ الذمة لأي شخص ينسخ الملفات والسورس والاكواد الخاصه بي حتى لو كان قريبا مني لن ابرئ الذمة له -----
 -----------------------------------------------------
 -- This Source Was Developed By (Abs) @abbasfadhil. --
---     This Is The Source Channel @BAANDDE .      --
+--     This Is The ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 @BAANDDE .      --
 --                     - WaTaN2 -                    --
 --           -- https://t.me/BAANDDE --           --
 ------------------------------------------------------
@@ -1427,7 +1427,7 @@ local Text = [[
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
 يمكنك مسح رتب المجموعه من خلال الازرار اسفل
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="مسح الاساسيين",callback_data="/DelBasicConstructor:"..data.sender_user_id_},{text="مسح المنشئين",callback_data="/DelConstructor:"..data.sender_user_id_}},{{text="مسح المدراء",callback_data="/DelManager:"..data.sender_user_id_},{text="مسح الادمنيه",callback_data="/DelAdmins:"..data.sender_user_id_}},{{text="مسح المميزين",callback_data="/DelVipMem:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1939,7 +1939,7 @@ local Text = [[
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
 *✯︙يمكنك مسح الممنوعات من خلال الازرار اسفل*
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="مسح المتحركات",callback_data="/DelGif:"..data.sender_user_id_},{text="مسح الملصقات",callback_data="/DelSticker:"..data.sender_user_id_}},{{text="مسح الصور",callback_data="/DelPhoto:"..data.sender_user_id_},{text="مسح الكلمات",callback_data="/DelTextfilter:"..data.sender_user_id_}},{{text="مسح قوائم المنع",callback_data="/DelAllFilter:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
@@ -2000,7 +2000,7 @@ local Text = [[
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
 *✯︙يمكنك فتح و قفل الاوامر من خلال الازرار اسفل*
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="قفل الدردشه",callback_data="/lockText:"..data.sender_user_id_},{text="فتح الدردشه",callback_data="/unlockText:"..data.sender_user_id_}},{{text="قفل الدخول",callback_data="/lockjoin:"..data.sender_user_id_},{text="فتح الدخول",callback_data="/unlockjoin:"..data.sender_user_id_}},{{text="قفل البوتات",callback_data="/LockBotList:"..data.sender_user_id_},{text="فتح البوتات",callback_data="/unlockBot:"..data.sender_user_id_}},{{text="قفل الاشعارات",callback_data="/lockTagServr:"..data.sender_user_id_},{text="فتح الاشعارات",callback_data="/unlockTagServr:"..data.sender_user_id_}},{{text="قفل التعديل",callback_data="/lockEditMsgs:"..data.sender_user_id_},{text="فتح التعديل",callback_data="/unlockEditMsgs:"..data.sender_user_id_}},{{text="قفل الملصقات",callback_data="/lockStickers:"..data.sender_user_id_},{text="فتح الملصقات",callback_data="/unlockStickers:"..data.sender_user_id_}},{{text="قفل المتحركه",callback_data="/lockGifs:"..data.sender_user_id_},{text="فتح المتحركه",callback_data="/unlockGifs:"..data.sender_user_id_}},{{text="قفل الفيديو",callback_data="/lockVideos:"..data.sender_user_id_},{text="فتح الفيديو",callback_data="/unlockVideos:"..data.sender_user_id_}},{{text="قفل الصور",callback_data="/unlockPhoto:"..data.sender_user_id_},{text="فتح الصور",callback_data="/unlockPhoto:"..data.sender_user_id_}},{{text="قفل التوجيه",callback_data="/lockForwards:"..data.sender_user_id_},{text="فتح التوجيه",callback_data="/unlockForwards:"..data.sender_user_id_}},{{text="قفل التكرار",callback_data="/LockSpamList:"..data.sender_user_id_},{text="فتح التكرار",callback_data="/unlockSpam:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -2019,7 +2019,7 @@ local Text = [[
 *✯︙بالكتم*
 *✯︙بالتقيد*
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="قفل البوتات بالطرد",callback_data="/lockBotKick:"..data.sender_user_id_},{text="قفل البوتات بالتقيد",callback_data="/lockBotKed:"..data.sender_user_id_}},{{text="قفل البوتات بالكتم",callback_data="/lockBotDel:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/locklist:"..data.sender_user_id_}}}
@@ -2039,7 +2039,7 @@ local Text = [[
 *✯︙بالتقيد*
 *✯︙بالحذف*
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="قفل التكرار بالطرد",callback_data="/lockSpamKick:"..data.sender_user_id_},{text="قفل التكرار بالتقيد",callback_data="/lockSpamKed:"..data.sender_user_id_}},{{text="قفل التكرار بالحذف",callback_data="/lockSpamDel:"..data.sender_user_id_},{text="قفل التكرار بالكتم",callback_data="/lockSpamMute:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/locklist:"..data.sender_user_id_}}}
@@ -2442,7 +2442,7 @@ local Text = [[
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
 ✯︙يمكنك التعطيل والتفعيل عن طريق الازرار بلاسفل
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="تعطيل الايدي بالصوره",callback_data="/LockIdPhoto:"..data.sender_user_id_},{text="تفعيل الايدي بالصوره",callback_data="/UnLockIdPhoto:"..data.sender_user_id_}},{{text="تعطيل الايدي",callback_data="/LockId:"..data.sender_user_id_},{text="تفعيل الايدي",callback_data="/UnLockId:"..data.sender_user_id_}},{{text="تعطيل الرابط",callback_data="/LockGpLinks:"..data.sender_user_id_},{text="تفعيل الرابط",callback_data="/UnLockGpLinks:"..data.sender_user_id_}},{{text="تعطيل الرابط انلاين",callback_data="/LockGpLinksinline:"..data.sender_user_id_},{text="تفعيل الرابط انلاين",callback_data="/UnLockGpLinksinline:"..data.sender_user_id_}},{{text="تعطيل الترحيب",callback_data="/LockWelcome:"..data.sender_user_id_},{text="تفعيل الترحيب",callback_data="/UnLockWelcome:"..data.sender_user_id_}},{{text="تعطيل الردود المطور",callback_data="/LockAllRed:"..data.sender_user_id_},{text="تفعيل الردود المطور",callback_data="/UnLockAllRed:"..data.sender_user_id_}},{{text="تعطيل ردود المدير",callback_data="/LockGpRed:"..data.sender_user_id_},{text="تفعيل ردود المدير",callback_data="/UnLockGpRed:"..data.sender_user_id_}},{{text="تعطيل نزلني",callback_data="/LockDelMe:"..data.sender_user_id_},{text="تفعيل نزلني",callback_data="/UnLockDelMe:"..data.sender_user_id_}},{{text="تعطيل اطردني",callback_data="/LockKickMe:"..data.sender_user_id_},{text="تفعيل اطردني",callback_data="/UnLockKickMe:"..data.sender_user_id_}},{{text="تعطيل الحظر",callback_data="/LockKickBan:"..data.sender_user_id_},{text="تفعيل الحظر",callback_data="/UnLockKickBan:"..data.sender_user_id_}},{{text="تعطيل الرفع",callback_data="/LockProSet:"..data.sender_user_id_},{text="تفعيل الرفع",callback_data="/UnLockProSet:"..data.sender_user_id_}},{{text="تعطيل الالعاب",callback_data="/LockGames:"..data.sender_user_id_},{text="تفعيل الالعاب",callback_data="/UnLockGames:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -2664,7 +2664,7 @@ local Text = [[
 ✯︙م5 ↫ اوامر المطورين
 ✯︙م6 ↫ اوامر الاعضاء
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="اوامر الرتب",callback_data="/DelList:"..data.sender_user_id_}},{{text="التفعيل و التعطيل",callback_data="/lockorder:"..data.sender_user_id_},{text="القفل و الفتح",callback_data="/locklist:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
@@ -2726,7 +2726,7 @@ local Text = [[
 ✯︙البوتات بالطرد
 ✯︙البوتات بالتقيد
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -2795,7 +2795,7 @@ local Text = [[
 ✯︙تقييد يوم + عدد الايام
 ✯︙الغاء تقييد ↫ لالغاء التقييد بالوقت
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -2854,7 +2854,7 @@ local Text = [[
 ✯︙ردود المدير • ردود المطور • التحقق
 ✯︙ضافني • حساب العمر • الزخرفه
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -2907,7 +2907,7 @@ local Text = [[
 ✯︙المنشئين الاساسيين 
 ✯︙حذف جميع الرتب
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -2985,7 +2985,7 @@ local Text = [[
 ✯︙ترحيب البوت • المغادره
 ✯︙البوت الخدمي • التواصل
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -3025,7 +3025,7 @@ local Text = [[
 ✯︙تحويل + بالرد ↫ صوره • ملصق • صوت • بصمه
 ✯︙انطق + الكلام تدعم جميع اللغات مع الترجمه للعربي
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -3399,7 +3399,7 @@ local key = {
 {'↫ تحديث السورس ✯','↫ تحديث ✯'},
 {'↫ السيرفر ✯'},
 {'↫ مبرمج السورس ✯','↫ قناة السورس ✯'},
-{'↫  السورس ✯'},
+{'↫ السورس ✯'},
 {'↫ رجوع ✯'},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
@@ -3503,7 +3503,7 @@ local key = {
 {'↫ اوامر التسليه ✯','↫ الاوامر الخدميه  ✯'},
 {'↫ اوامر النسب ✯'},
 {'↫ العاب ✯'},
-{'↫  السورس ✯','↫  المطور ✯'},
+{'↫ السورس ✯','↫ المطور ✯'},
 {'↫ رجوع ✯'},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
@@ -3516,7 +3516,7 @@ local key = {
 {'↫ ميمز ✯','↫ ريمكس ✯'},
 {'↫ صوره ✯','↫ متحركه ✯'},
 {'↫ مسلسل ✯','↫ فلم ✯'},
-{'↫  رجوع  ✯'},
+{'↫ رجوع ✯'},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
@@ -3527,9 +3527,9 @@ local key = {
 {'↫ الابراج ✯','↫ حساب العمر ✯'},
 {'↫ الزخرفه ✯','↫ معاني الاسماء ✯'},
 {'↫ الحمايه ✯'},
-{'↫  معرفي ✯','↫  اسمي ✯','↫ ايديي ✯'},
+{'↫ معرفي ✯','↫ اسمي ✯','↫ ايديي ✯'},
 {'↫  نبذتي ✯','↫ نبذا ✯'},
-{'↫  رجوع  ✯'},
+{'↫ رجوع ✯'},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
@@ -3541,7 +3541,7 @@ local key = {
 {'↫ نسبه الرجوله ✯','↫ نسبه الانوثه ✯'},
 {'↫ نسبه الغباء ✯','↫ نسبه الجمال ✯'},
 {'↫ نسبه الخيانه ✯'},
-{'↫  رجوع  ✯'},
+{'↫ رجوع ✯'},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
@@ -3557,7 +3557,7 @@ local key = {
 {'↫ امثله ✯','↫ اسئله ✯'},
 {'↫ تخمين ✯',''},
 {'↫ رياضيات ✯','↫ انكليزي ✯'},
-{'↫  رجوع  ✯'},
+{'↫ رجوع ✯'},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
@@ -6110,7 +6110,7 @@ local Text = [[
 *✯︙ريمكس*
 *✯︙ميمز*
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="غنيلي",callback_data="/Song:"..msg.sender_user_id_},{text="اغنيه",callback_data="/mp3:"..msg.sender_user_id_}},{{text="متحركه",callback_data="/gif:"..msg.sender_user_id_},{text="صوره",callback_data="/photo:"..msg.sender_user_id_}},{{text="انمي",callback_data="/anime:"..msg.sender_user_id_},{text="ريمكس",callback_data="/remix:"..msg.sender_user_id_}},{{text="ميمز",callback_data="/memz:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
@@ -6245,7 +6245,7 @@ local Text = [[
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
 ✯︙نقاطي • بيع نقاطي
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="الالعاب المتطوره",callback_data="/GameInline:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
@@ -10896,7 +10896,7 @@ local TXTE = "✯︙اعدادات المجموعه ↫ ⤈\n𓍹======𝔹𝔸�
 .."✯︙التكرار ↫ "..flood.."\n"
 .."✯︙عدد التكرار ↫ "..Flood_Num.."\n"
 .."✯︙عدد السبام ↫ "..spam_c.."\n"
-.."𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻\n✯︙[Source Channel](https://t.me/BAANDDE)\n"
+.."𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻\n✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)\n"
 Dev_Abs(msg.chat_id_, msg.id_, 1, TXTE, 1, 'md')
 end
 end
@@ -12648,7 +12648,7 @@ local Text = [[
 ✯︙م5 ↫ اوامر المطورين
 ✯︙م6 ↫ اوامر الاعضاء
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..msg.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..msg.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..msg.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..msg.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..msg.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..msg.sender_user_id_}},{{text="اوامر الرتب",callback_data="/DelList:"..msg.sender_user_id_}},{{text="التفعيل و التعطيل",callback_data="/lockorder:"..msg.sender_user_id_},{text="القفل و الفتح",callback_data="/locklist:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
@@ -12719,7 +12719,7 @@ local Text = [[
 ✯︙البوتات بالطرد
 ✯︙البوتات بالتقيد
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -12794,7 +12794,7 @@ local Text = [[
 ✯︙تقييد يوم + عدد الايام
 ✯︙الغاء تقييد ↫ لالغاء التقييد بالوقت
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -12859,7 +12859,7 @@ local Text = [[
 ✯︙ردود المدير • ردود المطور • التحقق
 ✯︙ضافني • حساب العمر • الزخرفه
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -12918,7 +12918,7 @@ local Text = [[
 ✯︙المنشئين الاساسيين 
 ✯︙حذف جميع الرتب
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -13002,7 +13002,7 @@ local Text = [[
 ✯︙ترحيب البوت • المغادره
 ✯︙البوت الخدمي • التواصل
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -13048,7 +13048,7 @@ local Text = [[
 ✯︙تحويل + بالرد ↫ صوره • ملصق • صوت • بصمه
 ✯︙انطق + الكلام تدعم جميع اللغات مع الترجمه للعربي
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end
@@ -13060,7 +13060,7 @@ local Text = [[
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
 *✯︙يمكنك مسح رتب المجموعه من خلال الازرار اسفل*
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="مسح الاساسيين",callback_data="/DelBasicConstructor:"..msg.sender_user_id_},{text="مسح المنشئين",callback_data="/DelConstructor:"..msg.sender_user_id_}},{{text="مسح المدراء",callback_data="/DelManagers:"..msg.sender_user_id_},{text="مسح الادمنيه",callback_data="/DelAdmins:"..msg.sender_user_id_}},{{text="مسح المميزين",callback_data="/DelVipMem:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..msg.sender_user_id_}}}
@@ -13075,7 +13075,7 @@ local Text = [[
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
 *✯︙يمكنك مسح الممنوعات من خلال الازرار اسفل*
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="مسح المتحركات",callback_data="/DelGif:"..msg.sender_user_id_},{text="مسح الملصقات",callback_data="/DelSticker:"..msg.sender_user_id_}},{{text="مسح الصور",callback_data="/DelPhoto:"..msg.sender_user_id_},{text="مسح الكلمات",callback_data="/DelTextfilter:"..msg.sender_user_id_}},{{text="مسح قوائم المنع",callback_data="/DelAllFilter:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
@@ -13091,7 +13091,7 @@ local Text = [[
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
 *✯︙يمكنك قفل وفتح الاوامر من خلال الازرار اسفل*
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="قفل الدردشه",callback_data="/lockText:"..msg.sender_user_id_},{text="فتح الدردشه",callback_data="/unlockText:"..msg.sender_user_id_}},{{text="قفل الدخول",callback_data="/lockjoin:"..msg.sender_user_id_},{text="فتح الدخول",callback_data="/unlockjoin:"..msg.sender_user_id_}},{{text="قفل البوتات",callback_data="/LockBotList:"..msg.sender_user_id_},{text="فتح البوتات",callback_data="/unlockBot:"..msg.sender_user_id_}},{{text="قفل الاشعارات",callback_data="/lockTagServr:"..msg.sender_user_id_},{text="فتح الاشعارات",callback_data="/unlockTagServr:"..msg.sender_user_id_}},{{text="قفل التعديل",callback_data="/lockEditMsgs:"..msg.sender_user_id_},{text="فتح التعديل",callback_data="/unlockEditMsgs:"..msg.sender_user_id_}},{{text="قفل الملصقات",callback_data="/lockStickers:"..msg.sender_user_id_},{text="فتح الملصقات",callback_data="/unlockStickers:"..msg.sender_user_id_}},{{text="قفل المتحركه",callback_data="/lockGifs:"..msg.sender_user_id_},{text="فتح المتحركه",callback_data="/unlockGifs:"..msg.sender_user_id_}},{{text="قفل الفيديو",callback_data="/lockVideos:"..msg.sender_user_id_},{text="فتح الفيديو",callback_data="/unlockVideos:"..msg.sender_user_id_}},{{text="قفل الصور",callback_data="/unlockPhoto:"..msg.sender_user_id_},{text="فتح الصور",callback_data="/unlockPhoto:"..msg.sender_user_id_}},{{text="قفل التوجيه",callback_data="/lockForwards:"..msg.sender_user_id_},{text="فتح التوجيه",callback_data="/unlockForwards:"..msg.sender_user_id_}},{{text="قفل التكرار",callback_data="/LockSpamList:"..msg.sender_user_id_},{text="فتح التكرار",callback_data="/unlockSpam:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/HelpList:"..msg.sender_user_id_}}}
@@ -13107,7 +13107,7 @@ local Text = [[
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
 ✯︙يمكنك التعطيل والتفعيل عن طريق الازرار بلاسفل
 𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻
-✯︙[Source Channel](https://t.me/BAANDDE)
+✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="تعطيل الايدي بالصوره",callback_data="/LockIdPhoto:"..msg.sender_user_id_},{text="تفعيل الايدي بالصوره",callback_data="/UnLockIdPhoto:"..msg.sender_user_id_}},{{text="تعطيل الايدي",callback_data="/LockId:"..msg.sender_user_id_},{text="تفعيل الايدي",callback_data="/UnLockId:"..msg.sender_user_id_}},{{text="تعطيل الرابط",callback_data="/LockGpLinks:"..msg.sender_user_id_},{text="تفعيل الرابط",callback_data="/UnLockGpLinks:"..msg.sender_user_id_}},{{text="تعطيل الرابط انلاين",callback_data="/LockGpLinksinline:"..msg.sender_user_id_},{text="تفعيل الرابط انلاين",callback_data="/UnLockGpLinksinline:"..msg.sender_user_id_}},{{text="تعطيل الترحيب",callback_data="/LockWelcome:"..msg.sender_user_id_},{text="تفعيل الترحيب",callback_data="/UnLockWelcome:"..msg.sender_user_id_}},{{text="تعطيل الردود المطور",callback_data="/LockAllRed:"..msg.sender_user_id_},{text="تفعيل الردود المطور",callback_data="/UnLockAllRed:"..msg.sender_user_id_}},{{text="تعطيل ردود المدير",callback_data="/LockGpRed:"..msg.sender_user_id_},{text="تفعيل ردود المدير",callback_data="/UnLockGpRed:"..msg.sender_user_id_}},{{text="تعطيل نزلني",callback_data="/LockDelMe:"..msg.sender_user_id_},{text="تفعيل نزلني",callback_data="/UnLockDelMe:"..msg.sender_user_id_}},{{text="تعطيل اطردني",callback_data="/LockKickMe:"..msg.sender_user_id_},{text="تفعيل اطردني",callback_data="/UnLockKickMe:"..msg.sender_user_id_}},{{text="تعطيل الحظر",callback_data="/LockKickBan:"..msg.sender_user_id_},{text="تفعيل الحظر",callback_data="/UnLockKickBan:"..msg.sender_user_id_}},{{text="تعطيل الرفع",callback_data="/LockProSet:"..msg.sender_user_id_},{text="تفعيل الرفع",callback_data="/UnLockProSet:"..msg.sender_user_id_}},{{text="تعطيل الالعاب",callback_data="/LockGames:"..msg.sender_user_id_},{text="تفعيل الالعاب",callback_data="/UnLockGames:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -13250,8 +13250,8 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n✯︙قائمة ملفات متجر سورس وطن\n✯︙الملفات المتوفره حاليا ↫ ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
-local TextE = "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n✯︙علامة ↫ (✔) تعني الملف مفعل\n✯︙علامة ↫ (✖️) تعني الملف معطل\n"
+local TextS = "\n✯︙قائمة ملفات متجر سورس باندا\n✯︙الملفات المتوفره حاليا ↫ ⤈\n𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻\n"
+local TextE = "𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻\n✯︙علامة ↫ (✔) تعني الملف مفعل\n✯︙علامة ↫ (✖️) تعني الملف معطل\n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
 local CheckFileisFound = io.open("Files/"..name,"r")
@@ -13281,7 +13281,7 @@ local GetJson, Res = https.request("https://raw.githubusercontent.com/AntakTeam/
 if Res == 200 then
 os.execute("rm -fr Files/"..FileName)
 send(msg.chat_id_, msg.id_,"\n✯︙الملف ↫ *"..FileName.."*\n✯︙تم تعطيله وحذفه من البوت بنجاح") 
-dofile('WaTaN2.lua')  
+dofile('Antak.lua')  
 else
 send(msg.chat_id_, msg.id_,"✯︙لا يوجد ملف بهذا الاسم") 
 end
@@ -13569,7 +13569,7 @@ end
 end 
 -----------------------------------------------------
 -- This Source Was Developed By (Abs) @abbasfadhil. --
---     This Is The Source Channel @BAANDDE .      --
+--     This Is The ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 @BAANDDE .      --
 --                     - Antak -                   --
 --           -- https://t.me/BAANDDE --           --
 ------------------------------------------------------
