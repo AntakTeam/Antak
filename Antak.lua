@@ -13169,22 +13169,6 @@ https.request('https://ccccxcc.ml/WaTaN2/Yt.php?Put=Search&TokenBot='..TokenBot.
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if SecondSudo(msg) then
-if text == 'تحديث المتجر' then 
-io.popen("mkdir Files")
-os.execute("rm -fr Files/*")
-io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/AddedMe.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/AutoFile.lua")  
-io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ChangeName.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ChangePhoto.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ChangeUser.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/MuteNames.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ProNames.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ReplyBot.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/TagAdmins.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/TagAll.lua") 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '♪︙تم تحديث المتجر الى الاصدار الجديد', 1, 'md') 
-dofile('WaTaN2.lua') 
-end
 if text == 'تحديث البوت' and ChCheck(msg) or text == '↫ تحديث ✯' and ChCheck(msg) then  
 dofile('Antak.lua') 
 io.popen("rm -rf ../.telegram-cli/*")
