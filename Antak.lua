@@ -3364,7 +3364,7 @@ end
 end 
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if ChatType == 'pv' then 
-if text == '/start' or text == '↫ رجوع ✯' then 
+if text == '/start' or text == '↫رجوع ✯' then 
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙مرحبا عزيزي المطور \n✯︙انت المطور الاساسي هنا \n✯︙اليك ازرار سورس باندا \n✯︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3377,7 +3377,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ تعيين كلايش الاوامر ✯' then 
+if text == '↫تعيين كلايش الاوامر ✯' then 
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بتعديل وتغيير كلايش سورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3392,7 +3392,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ السورس ✯' then 
+if text == '↫السورس ✯' then 
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بتحديث  سورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3405,7 +3405,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ الاحصائيات ✯' then 
+if text == '↫الاحصائيات ✯' then 
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب أحصائيات  سورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3419,7 +3419,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫  المطورين ✯' then 
+if text == '↫المطورين ✯' then 
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب المطورين لسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3432,7 +3432,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ التفعيل والتعطيل ✯' then 
+if text == '↫التفعيل والتعطيل ✯' then 
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب التفعيل والتعطيل لسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3447,7 +3447,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ الاذاعه ✯' then 
+if text == '↫الاذاعه ✯' then 
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالاذاعه لسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3460,7 +3460,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ العام ✯' then 
+if text == '↫العام ✯' then 
 
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالعام لسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
@@ -3473,7 +3473,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ ردود الخاص ✯' then 
+if text == '↫ردود الخاص ✯' then 
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بردود الخاص لسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3484,7 +3484,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ الاشتراك الاجباري ✯' then 
+if text == '↫الاشتراك الاجباري ✯' then 
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالاشتراك الاجباري لسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3497,7 +3497,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ الاوامر الخدميه ✯' or text == '/play' or text == '↫  رجوع  ✯' or text == 'اوامر الخدميه' or text == '/free' then
+if text == '↫الاوامر الخدميه ✯' or text == '/play' or text == '↫رجوع  ✯' or text == 'اوامر الخدميه' or text == '/free' then
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ اوامر التسليه ✯','↫ الاوامر الخدميه  ✯'},
@@ -3509,7 +3509,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
-if text == '↫ اوامر التسليه ✯' then 
+if text == '↫اوامر التسليه ✯' then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بأوامر التسليه الخاصه بسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ غنيلي ✯','↫ اغنيه ✯'},
@@ -3521,7 +3521,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
-if text == '↫ الاوامر الخدميه  ✯' then 
+if text == '↫الاوامر الخدميه  ✯' then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ الابراج ✯','↫ حساب العمر ✯'},
@@ -3534,7 +3534,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
-if text == '↫ اوامر النسب ✯' then 
+if text == '↫اوامر النسب ✯' then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بأوامر النسب الخاصه بسورس باندا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ نسبه الكره ✯','↫ نسبه الحب ✯'},
@@ -3546,7 +3546,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
-if text == '↫ العاب ✯' then 
+if text == '↫العاب ✯' then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بألعاب سورس باندا فقط اضغط على اللعبه الذي تريد لعبها'
 local key = {
 {'↫ الالعاب ✯','↫ الالعاب المتطوره ✯'},
