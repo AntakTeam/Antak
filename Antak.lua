@@ -3656,16 +3656,16 @@ DevAbs:del(Antak..'Abs:Start:Bots'..msg.sender_user_id_)
 return false
 end
 if SecondSudo(msg) then
-if text == 'ضع كليشه ستارت' and ChCheck(msg) or text == '↫ ضع كليشه ستارت ✯' and ChCheck(msg) then 
+if text == 'ضع كليشه ستارت' and ChCheck(msg) or text == '↫ضع كليشه ستارت ✯' and ChCheck(msg) then 
 DevAbs:set(Antak..'Abs:Start:Bots'..msg.sender_user_id_,true) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙ارسل لي كليشة الستارت الان', 1, 'md')
 return false
 end
-if text == 'حذف كليشه ستارت' and ChCheck(msg) or text == '↫ حذف كليشه ستارت ✯' and ChCheck(msg) then 
+if text == 'حذف كليشه ستارت' and ChCheck(msg) or text == '↫حذف كليشه ستارت ✯' and ChCheck(msg) then 
 DevAbs:del(Antak..'Start:Bot') 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم حذف كليشة الستارت بنجاح', 1, 'md')
 end
-if text == 'جلب كليشه ستارت' and ChCheck(msg) or text == '↫ جلب كليشه ستارت ✯' and ChCheck(msg) then  
+if text == 'جلب كليشه ستارت' and ChCheck(msg) or text == '↫جلب كليشه ستارت ✯' and ChCheck(msg) then  
 local start = DevAbs:get(Antak.."Abs:Start:Bot")
 if start then 
 Start_Source = start
@@ -3675,45 +3675,45 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, Start_Source, 1, 'md')
 return false
 end
-if text == 'تفعيل التواصل' and ChCheck(msg) or text == '↫ تفعيل التواصل ✯' and ChCheck(msg) then   
+if text == 'تفعيل التواصل' and ChCheck(msg) or text == '↫تفعيل التواصل ✯' and ChCheck(msg) then   
 local AntakTeam = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل التواصل بنجاح'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, AntakTeam, 14, string.len(msg.sender_user_id_))
 DevAbs:del(Antak..'Abs:Texting:Pv') 
 end
-if text == 'تعطيل التواصل' and ChCheck(msg) or text == '↫ تعطيل التواصل ✯' and ChCheck(msg) then  
+if text == 'تعطيل التواصل' and ChCheck(msg) or text == '↫تعطيل التواصل ✯' and ChCheck(msg) then  
 local AntakTeam = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تعطيل التواصل بنجاح'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, AntakTeam, 14, string.len(msg.sender_user_id_))
 DevAbs:set(Antak..'Abs:Texting:Pv',true) 
 end
 if Sudo(msg) then
-if text == 'تفعيل النسخه التلقائيه' or text == 'تفعيل جلب نسخه الكروبات' or text == 'تفعيل عمل نسخه للمجموعات' or text == '↫ تفعيل النسخه التلقائيه ✯' then   
+if text == 'تفعيل النسخه التلقائيه' or text == 'تفعيل جلب نسخه الكروبات' or text == 'تفعيل عمل نسخه للمجموعات' or text == '↫تفعيل النسخه التلقائيه ✯' then   
 Dev_Abs(msg.chat_id_,msg.id_, 1, "✯︙تم تفعيل جلب نسخة الكروبات التلقائيه\n✯︙سيتم ارسال نسخه تلقائيه للكروبات كل يوم الى خاص المطور الاساسي", 1, 'md')
 DevAbs:del(Antak.."Abs:Lock:AutoFile")
 end
-if text == 'تعطيل النسخه التلقائيه' or text == 'تعطيل جلب نسخه الكروبات' or text == 'تعطيل عمل نسخه للمجموعات' or text == '↫ تعطيل النسخه التلقائيه ✯' then  
+if text == 'تعطيل النسخه التلقائيه' or text == 'تعطيل جلب نسخه الكروبات' or text == 'تعطيل عمل نسخه للمجموعات' or text == '↫تعطيل النسخه التلقائيه ✯' then  
 Dev_Abs(msg.chat_id_,msg.id_, 1, "✯︙تم تعطيل جلب نسخة الكروبات التلقائيه", 1, 'md')
 DevAbs:set(Antak.."Abs:Lock:AutoFile",true) 
 end
 end
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
-if text == "الابراج" or text == "↫ الابراج ✯" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙من خلال البوت يمكنك معرفه توقعات برجك \n✯︙فقط قم بارسال امر برج + اسم البرج \n✯︙مثال : برج الاسد ،\n✯︙لمعرفه برجك قم بالرجوع الى قسم حساب العمر ', 1, 'md') end
-if text == "حساب العمر" or text == "↫ حساب العمر ✯" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙من خلال البوت يمكنك حساب عمرك \n✯︙فقط قم بارسال امر احسب + مواليدك الى البوت \n✯︙بالتنسيق التالي مثال : احسب 2000/7/24', 1, 'md') end
-if text == "الحمايه" or text == "↫ الحمايه ✯" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙اضف البوت في المجموعه ثم قم برفعه مشرف وارسل تفعيل \n✯︙وتمتع بخدمات غير موجوده في باقي البوتات ', 1, 'md') end
-if text == "الزخرفه" or text == "↫ الزخرفه ✯" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙قم بأرسال أمر زخرفه وثم ارسال الاسم الذي تريد زخرفته بألانكليزي أو العربي', 1, 'md') end
+if text == "الابراج" or text == "↫الابراج ✯" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙من خلال البوت يمكنك معرفه توقعات برجك \n✯︙فقط قم بارسال امر برج + اسم البرج \n✯︙مثال : برج الاسد ،\n✯︙لمعرفه برجك قم بالرجوع الى قسم حساب العمر ', 1, 'md') end
+if text == "حساب العمر" or text == "↫حساب العمر ✯" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙من خلال البوت يمكنك حساب عمرك \n✯︙فقط قم بارسال امر احسب + مواليدك الى البوت \n✯︙بالتنسيق التالي مثال : احسب 2000/7/24', 1, 'md') end
+if text == "الحمايه" or text == "↫الحمايه ✯" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙اضف البوت في المجموعه ثم قم برفعه مشرف وارسل تفعيل \n✯︙وتمتع بخدمات غير موجوده في باقي البوتات ', 1, 'md') end
+if text == "الزخرفه" or text == "↫الزخرفه ✯" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙قم بأرسال أمر زخرفه وثم ارسال الاسم الذي تريد زخرفته بألانكليزي أو العربي', 1, 'md') end
 if text == "يوتيوب" and ChCheck(msg) or text == "اليوتيوب" and ChCheck(msg) or text == "↫ بوت اليوتيوب ✯" and ChCheck(msg) or text == "بوت اليوتيوب" and ChCheck(msg) or text == "اريد بوت يوتيوب" and ChCheck(msg) or text == "شمرلي بوت يوتيوب" and ChCheck(msg) or text == "يوت" and ChCheck(msg) then local inline = {{{text="‹ اضغط هنا ›",url="https://t.me/XiXbbot"}}} SendInline(msg.chat_id_,'*✯︙اضغط للحصول على بوت اليوتيوب*',nil,inline,msg.id_/2097152/0.5) return false end
-if text == "معاني الاسماء" or text == "↫ معاني الاسماء ✯" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙من خلال البوت يمكنك معرفه معنى اسمك \n✯︙فقط قم بارسال امر معنى اسم + الاسم \n✯︙مثال : معنى اسم ريو', 1, 'md') end
+if text == "معاني الاسماء" or text == "↫معاني الاسماء ✯" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙من خلال البوت يمكنك معرفه معنى اسمك \n✯︙فقط قم بارسال امر معنى اسم + الاسم \n✯︙مثال : معنى اسم ريو', 1, 'md') end
 if text == "عدد المسح" or text == "تعين عدد المسح" or text == "تعيين عدد المسح" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙فقط قم بارسال امر عدد المسح + عدد المسح \n✯︙مثال : عدد المسح 100', 1, 'md') end
 if text == "انطق" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙فقط قم بارسال امر انطق + الكلمه\n✯︙سيقوم البوت بنطق الكلمه \n✯︙مثال : انطق هلو', 1, 'md') end
-if text == "ايديي" and ChCheck(msg) or text == "↫ ايديي ✯" and ChCheck(msg) then Dev_Abs(msg.chat_id_, msg.id_, 1,'✯︙ايديك ↫ ❨ `'..msg.sender_user_id_..'` ❩', 1, 'md') end
+if text == "ايديي" and ChCheck(msg) or text == "↫ايديي ✯" and ChCheck(msg) then Dev_Abs(msg.chat_id_, msg.id_, 1,'✯︙ايديك ↫ ❨ `'..msg.sender_user_id_..'` ❩', 1, 'md') end
 -- Source Antak --
-if text == 'نبذا' and ChCheck(msg) or text == '↫ نبذا ✯' then
+if text == 'نبذا' and ChCheck(msg) or text == '↫نبذا ✯' then
 local AntakTeam = {'- Nothing stops him who wants you .','make them wish they had you !.','Maybe a magical girl','٫ 𝖡𝖾 𝗌𝗂𝗆𝗉𝗅𝖾 𝖺𝗇𝖽 𝖽𝗂𝖿𝖿𝖾𝗋𝖾𝗇𝗍','. 𝖬𝖺𝗄𝖾 𝖽𝗋𝖾𝖺𝗆𝗌 𝖿𝗋𝗈𝗆 𝗒𝗈𝗎𝗋 𝗋𝖾𝖿𝗋𝖺𝖼𝗍𝗂𝗈𝗇𝗌 . .',':Life is lying .','𝖨 𝗐𝗂𝗅𝗅 𝖺𝗅𝗐𝖺𝗒𝗌 𝗅𝗈𝗏𝖾 𝗒𝗈𝗎 𝗇𝖾𝗏𝖾𝗋 𝖿𝗈𝗋𝗀𝖾𝗍'}  
 Dev_Abs(msg.chat_id_, msg.id_, 1, ''..AntakTeam[math.random(#AntakTeam)]..'' , 1, 'md')  
 return false
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
-if text == "المطور" or text == "مطور" or text == "↫ المطور ✯" then
+if text == "المطور" or text == "مطور" or text == "↫المطور ✯" then
 local DevText = DevAbs:get(Antak.."DevText")
 if DevText then
 Dev_Abs(msg.chat_id_, msg.id_,DevText)
@@ -3732,7 +3732,7 @@ end,nil)
 end
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
-if text == "معرفي" or text == "↫  معرفي ✯" then
+if text == "معرفي" or text == "↫معرفي ✯" then
 function get_username(extra,result,success)
 text = '✯︙معرفك ↫ ❨ User ❩'
 local text = text:gsub('User',('@'..result.username_ or ''))
@@ -3740,7 +3740,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
 getUser(msg.sender_user_id_,get_username)
 end
-if text == "اسمي" or text == "↫  اسمي ✯" then
+if text == "اسمي" or text == "↫اسمي ✯" then
 function get_firstname(extra,result,success)
 text = '✯︙اسمك ↫ firstname lastname'
 local text = text:gsub('firstname',(result.first_name_ or ''))
@@ -3749,7 +3749,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
 getUser(msg.sender_user_id_,get_firstname)
 end 
-if text == 'نبذتي' or text == 'بايو' or text == 'البايو' or text == '↫  نبذتي ✯' then
+if text == 'نبذتي' or text == 'بايو' or text == 'البايو' or text == '↫نبذتي ✯' then
 local my_ph = DevAbs:get(Antak.."Abs:Bio:Profile"..msg.chat_id_)
 if not my_ph then
 send(msg.chat_id_, msg.id_," ✯︙البايو معطل") 
@@ -3757,7 +3757,7 @@ return false
 end
 send(msg.chat_id_, msg.id_,'['..GetBio(msg.sender_user_id_)..']')
 end
-if text == "صورتي" or text == "↫ صورتي ✯" then
+if text == "صورتي" or text == "↫صورتي ✯" then
 local my_ph = DevAbs:get(Antak.."Abs:Photo:Profile"..msg.chat_id_)
 if not my_ph then
 send(msg.chat_id_, msg.id_," ✯︙الصوره معطله") 
@@ -3772,7 +3772,7 @@ end end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil)
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
-if text == "الالعاب المتطوره" or text == "الالعاب الاحترافيه" or text == "↫ الالعاب المتطوره ✯" then
+if text == "الالعاب المتطوره" or text == "الالعاب الاحترافيه" or text == "↫الالعاب المتطوره ✯" then
 if not DevAbs:get(Antak..'Abs:Lock:Gamesinline'..msg.chat_id_) then
 Text =[[
 *✯︙قائمه الالعاب المتطوره اضغط للعب*
@@ -9280,7 +9280,7 @@ local List = {
 ☆•𝐮𝐬𝐞𝐫 : #username 𖣬  
 ☆•𝐦𝐬𝐠  : #msgs 𖣬 
 ☆•𝐬𝐭𝐚 : #stast 𖣬 
-☆•𝐢𝐝  : #id 𖣬
+☆•??𝐝  : #id 𖣬
 ]],
 [[
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
