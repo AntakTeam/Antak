@@ -1112,7 +1112,7 @@ Abs = math.random(2,1167);
 local Text ='*✯︙تم اختيار المقطع الصوتي لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/mp3:"..data.sender_user_id_}},{{text=". ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴 ✯",url="t.me/BAANDDE"}}} 
-return https.request("https://api.telegram.org/bot"..TokenBot..'/sendAudio?chat_id=' .. data.chat_id_ .. '&audio=https://t.me/AntakMp3/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendAudio?chat_id=' .. data.chat_id_ .. '&audio=https://t.me/WaTaNMp3/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
