@@ -1019,52 +1019,24 @@ else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✯ عذرا هذا الامر لكشف الروبوت وليس لك .")..'&show_alert=true')
 end 
 end
-if Text and Text:match('idu@(%d+)msg@(%d+)@id@(.*)') then
-local listYt = {Text:match('idu@(%d+)msg@(%d+)@id@(.*)')}
-if tonumber(listYt[1]) == tonumber(data.sender_user_id_) then
-Msg_idi = Msg_id/2097152/0.5
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = ' { Ogg - بصمه }', callback_data = 'oggidu@'..data.sender_user_id_..'idv@'..listYt[3]}, 
-},
-{
-{text = ' { Mp3 - ملف صوتي }', callback_data = 'mp3idu@'..data.sender_user_id_..'idv@'..listYt[3]},  {text = ' { Mp4 - فيديو }', callback_data = 'mp4idu@'..data.sender_user_id_..'idv@'..listYt[3]}, 
-},
-{
-{text = '{ الغاء الامر }', callback_data = 'idu@'..data.sender_user_id_..'delamr'},
-},
-}
-local textyt = '*✟︙عليك اختيار احدى الصيغ للتنزبل *'
-return https.request('https://api.telegram.org/bot'..tokenbot..'/editMessageText?chat_id='..data.chat_id_..'&text='..URL.escape(textyt)..'&message_id='..Msg_idi..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-end
-if Text and Text:match('oggidu@(%d+)idv@(.*)') then
-local listYt = {Text:match('oggidu@(%d+)idv@(.*)')}
-if tonumber(listYt[1]) == tonumber(data.sender_user_id_) then
-delete_msg(data.chat_id_, {[0] = Msg_id})  
-io.popen('curl -s "https://faeder.net/YoutubeApi/yt2.php?url='..listYt[2]..'&token='..tokenbot..'&chat='..Chat_id..'&type=ogg&msg=0"')
-end
-end
-if Text and Text:match('mp3idu@(%d+)idv@(.*)') then
-local listYt = {Text:match('mp3idu@(%d+)idv@(.*)')}
-if tonumber(listYt[1]) == tonumber(data.sender_user_id_) then
-delete_msg(data.chat_id_, {[0] = Msg_id})  
-io.popen('curl -s "https://faeder.net/YoutubeApi/yt2.php?url='..listYt[2]..'&token='..tokenbot..'&chat='..Chat_id..'&type=mp3&msg=0"')
-end
-end
-if Text and Text:match('mp4idu@(%d+)idv@(.*)') then
-local listYt = {Text:match('mp4idu@(%d+)idv@(.*)')}
-if tonumber(listYt[1]) == tonumber(data.sender_user_id_) then
-delete_msg(data.chat_id_, {[0] = Msg_id})  
-io.popen('curl -s "https://faeder.net/YoutubeApi/yt2.php?url='..listYt[2]..'&token='..tokenbot..'&chat='..Chat_id..'&type=mp4&msg=0"')
-end
-end
-if Text and Text:match('idu@(%d+)delamr') then
-local listYt = Text:match('idu@(%d+)delamr') 
-if tonumber(listYt) == tonumber(data.sender_user_id_) then
-delete_msg(data.chat_id_, {[0] = Msg_id})  
-end
+if DataText and DataText:match(tonumber(data.sender_user_id_)..'dl:id/(.*)') then
+local Url = DataText:match(tonumber(data.sender_user_id_)..'dl:id/(.*)')
+https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✯ جار تحميل النتائج يرجى الانتظار .. .")..'&show_alert=true')
+DeleteMessage(Chat_Id2,{[0] = MsgId2})
+https.request('https://ccccxcc.ml/Antak/Yt.php?Put=Photo&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&UserId='..data.sender_user_id_..'&Url='..Url..'&Name='..DirName)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..'dl:vi/(.*)') then
+local Url = DataText:match(tonumber(data.sender_user_id_)..'dl:vi/(.*)')
+https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✯ جار تحميل النتائج يرجى الانتظار .. .")..'&show_alert=true')
+https.request('https://ccccxcc.ml/Antak/Yt.php?Put=Video&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&Url='..Url..'&Name='..DirName)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..'dl:au/(.*)') then
+local Url = DataText:match(tonumber(data.sender_user_id_)..'dl:au/(.*)')
+https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✯ جار تحميل النتائج يرجى الانتظار .. .")..'&show_alert=true')
+https.request('https://ccccxcc.ml/Antak/Yt.php?Put=Audio&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&Url='..Url..'&Name='..DirName)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..'dl:vo/(.*)') then
+local Url = DataText:match(tonumber(data.sender_user_id_)..'dl:vo/(.*)')
+https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✯ جار تحميل النتائج يرجى الانتظار .. .")..'&show_alert=true')
+DeleteMessage(Chat_Id2,{[0] = MsgId2})
+https.request('https://ccccxcc.ml/Antak/Yt.php?Put=Voice&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&Url='..Url..'&Name='..DirName)
 end
 if DataText and DataText:match('/DelRed:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/DelRed:'..tonumber(data.sender_user_id_)..'(.*)')
@@ -13190,11 +13162,10 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, AntakTeam, 14, string.len(m
 DevAbs:set(Antak.."Abs:WhyTube"..msg.chat_id_,true) 
 return false  
 end 
-if text and text:match('^بحث (.*)$') and faeder11(msg) then
-local Ttext = text:match('^بحث (.*)$') 
-local MSGID = msg.id_/2097152/0.5
-local httpsCurl = "https://faeder.net/YoutubeApi/FaederApi.php?token="..tokenbot.."&msg="..MSGID.."&Text="..URL.escape(Ttext).."&chat_id="..msg.chat_id_.."&user="..msg.sender_user_id_
-io.popen('curl -s "'..httpsCurl..'"')
+if text and text:match('^بحث (.*)$') and not DevAbs:get(Antak.."Abs:WhyTube"..msg.chat_id_) and ChCheck(msg) then            
+local Text = text:match('^بحث (.*)$') 
+local msg_id = msg.id_/2097152/0.5 
+https.request('https://ccccxcc.ml/WaTaN2/Yt.php?Put=Search&TokenBot='..TokenBot..'&ChatId='..msg.chat_id_..'&UserId='..msg.sender_user_id_..'&Text='..URL.escape(Text)..'&MsgId='..msg_id..'&Name='..DirName)
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if SecondSudo(msg) then
