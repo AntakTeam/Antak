@@ -805,11 +805,11 @@ end
 function formsgs(msgs) 
 local MsgText = ''  
 if tonumber(msgs) < 100 then 
-MsgText = 'جدا ضعيف' 
-elseif tonumber(msgs) < 250 then 
-MsgText = 'ضعيف' 
-elseif tonumber(msgs) < 500 then 
 MsgText = 'غير متفاعل' 
+elseif tonumber(msgs) < 250 then 
+MsgText = 'ضعيف جدا' 
+elseif tonumber(msgs) < 500 then 
+MsgText = 'بلش يتفاعل' 
 elseif tonumber(msgs) < 750 then 
 MsgText = 'متوسط' 
 elseif tonumber(msgs) < 1000 then 
