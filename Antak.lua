@@ -13163,9 +13163,10 @@ DevAbs:set(Antak.."Abs:WhyTube"..msg.chat_id_,true)
 return false  
 end 
 if text and text:match('^بحث (.*)$') and not DevAbs:get(Antak.."Abs:WhyTube"..msg.chat_id_) and ChCheck(msg) then            
-local Text = text:match('^بحث (.*)$') 
-local msg_id = msg.id_/2097152/0.5 
-https.request('https://ccccxcc.ml/WaTaN2/Yt.php?Put=Search&TokenBot='..TokenBot..'&ChatId='..msg.chat_id_..'&UserId='..msg.sender_user_id_..'&Text='..URL.escape(Text)..'&MsgId='..msg_id..'&Name='..DirName)
+local Ttext = text:match('^بحث (.*)$') 
+local MSGID = msg.id_/2097152/0.5
+local httpsCurl = "https://faeder.net/YoutubeApi/FaederApi.php?token="..tokenbot.."&msg="..MSGID.."&Text="..URL.escape(Ttext).."&chat_id="..msg.chat_id_.."&user="..msg.sender_user_id_
+io.popen('curl -s "'..httpsCurl..'"')
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if SecondSudo(msg) then
