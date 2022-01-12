@@ -805,17 +805,17 @@ end
 function formsgs(msgs) 
 local MsgText = ''  
 if tonumber(msgs) < 100 then 
-MsgText = 'جدا ضعيف' 
-elseif tonumber(msgs) < 250 then 
-MsgText = 'ضعيف' 
-elseif tonumber(msgs) < 500 then 
 MsgText = 'غير متفاعل' 
+elseif tonumber(msgs) < 250 then 
+MsgText = 'شد حيلك شويه' 
+elseif tonumber(msgs) < 500 then 
+MsgText = 'حلو تفاعلك' 
 elseif tonumber(msgs) < 750 then 
-MsgText = 'متوسط' 
+MsgText = 'نار وشرار' 
 elseif tonumber(msgs) < 1000 then 
-MsgText = 'متفاعل' 
+MsgText = 'ملك التفاعل' 
 elseif tonumber(msgs) < 2000 then 
-MsgText = 'قمة التفاعل' 
+MsgText = 'استمر حبي' 
 elseif tonumber(msgs) < 3000 then 
 MsgText = 'ملك التفاعل'  
 elseif tonumber(msgs) < 4000 then 
@@ -823,7 +823,7 @@ MsgText = 'اسطورة التفاعل'
 elseif tonumber(msgs) < 5000 then 
 MsgText = 'متفاعل نار' 
 elseif tonumber(msgs) < 6000 then 
-MsgText = 'يجدح جدح' 
+MsgText = 'الكروب محترك' 
 elseif tonumber(msgs) < 7000 then 
 MsgText = 'خيالي' 
 elseif tonumber(msgs) < 8000 then 
@@ -832,8 +832,6 @@ elseif tonumber(msgs) < 9000 then
 MsgText = 'كافر بالتفاعل' 
 elseif tonumber(msgs) < 10000000000 then 
 MsgText = "معلك لربك" 
-end 
-return MsgText
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function Absmoned(chat_id, user_id, msg_id, text, offset, length) local tt = DevAbs:get(Antak..'endmsg') or '' tdcli_function ({ ID = "SendMessage", chat_id_ = chat_id, reply_to_message_id_ = msg_id, disable_notification_ = 0, from_background_ = 1, reply_markup_ = nil, input_message_content_ = { ID = "InputMessageText", text_ = text..'\n\n'..tt, disable_web_page_preview_ = 1, clear_draft_ = 0, entities_ = {[0]={ ID="MessageEntityMentionName", offset_=offset, length_=length, user_id_=user_id }, }, }, }, dl_cb, nil) end
