@@ -6414,6 +6414,12 @@ return false
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس' then
+local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
+data = JSON.decode(url)
+if data.Ch_Member.Info_AntakTeam ~= true then
+Dev_Abs(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
+return false 
+end
 Text = "[⦑ Welcome to Source ⦒](t.me/BAANDDE)\n[✯ ⦑ SOURCE WaTaN ⦒](t.me/BAANDDE)\n✯ Source version : 3.2"
 keyboard = {} 
 keyboard.inline_keyboard = {
