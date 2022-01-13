@@ -2003,7 +2003,7 @@ local Text = [[
 ✯︙[ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴](https://t.me/BAANDDE)
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="قفل الدردشه",callback_data="/lockText:"..data.sender_user_id_},{text="فتح الدردشه",callback_data="/unlockText:"..data.sender_user_id_}},{{text="قفل الدخول",callback_data="/lockjoin:"..data.sender_user_id_},{text="فتح الدخول",callback_data="/unlockjoin:"..data.sender_user_id_}},{{text="قفل البوتات",callback_data="/LockBotList:"..data.sender_user_id_},{text="فتح البوتات",callback_data="/unlockBot:"..data.sender_user_id_}},{{text="قفل الاشعارات",callback_data="/lockTagServr:"..data.sender_user_id_},{text="فتح الاشعارات",callback_data="/unlockTagServr:"..data.sender_user_id_}},{{text="قفل التعديل",callback_data="/lockEditMsgs:"..data.sender_user_id_},{text="فتح التعديل",callback_data="/unlockEditMsgs:"..data.sender_user_id_}},{{text="قفل الملصقات",callback_data="/lockStickers:"..data.sender_user_id_},{text="فتح الملصقات",callback_data="/unlockStickers:"..data.sender_user_id_}},{{text="قفل المتحركه",callback_data="/lockGifs:"..data.sender_user_id_},{text="فتح المتحركه",callback_data="/unlockGifs:"..data.sender_user_id_}},{{text="قفل الفيديو",callback_data="/lockVideos:"..data.sender_user_id_},{text="فتح الفيديو",callback_data="/unlockVideos:"..data.sender_user_id_}},{{text="قفل الصور",callback_data="/unlockPhoto:"..data.sender_user_id_},{text="فتح الصور",callback_data="/unlockPhoto:"..data.sender_user_id_}},{{text="قفل التوجيه",callback_data="/lockForwards:"..data.sender_user_id_},{text="فتح التوجيه",callback_data="/unlockForwards:"..data.sender_user_id_}},{{text="قفل التكرار",callback_data="/LockSpamList:"..data.sender_user_id_},{text="فتح التكرار",callback_data="/unlockSpam:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/HelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="قفل الدردشه",callback_data="/lockText:"..data.sender_user_id_},{text="فتح الدردشه",callback_data="/UnLockText:"..data.sender_user_id_}},{{text="قفل الدخول",callback_data="/lockjoin:"..data.sender_user_id_},{text="فتح الدخول",callback_data="/UnLockjoin:"..data.sender_user_id_}},{{text="قفل البوتات",callback_data="/LockBotList:"..data.sender_user_id_},{text="فتح البوتات",callback_data="/UnLockBot:"..data.sender_user_id_}},{{text="قفل الاشعارات",callback_data="/lockTagServr:"..data.sender_user_id_},{text="فتح الاشعارات",callback_data="/UnLockTagServr:"..data.sender_user_id_}},{{text="قفل التعديل",callback_data="/lockEditMsgs:"..data.sender_user_id_},{text="فتح التعديل",callback_data="/UnLockEditMsgs:"..data.sender_user_id_}},{{text="قفل الملصقات",callback_data="/lockStickers:"..data.sender_user_id_},{text="فتح الملصقات",callback_data="/UnLockStickers:"..data.sender_user_id_}},{{text="قفل المتحركه",callback_data="/lockGifs:"..data.sender_user_id_},{text="فتح المتحركه",callback_data="/UnLockGifs:"..data.sender_user_id_}},{{text="قفل الفيديو",callback_data="/lockVideos:"..data.sender_user_id_},{text="فتح الفيديو",callback_data="/UnLockVideos:"..data.sender_user_id_}},{{text="قفل الصور",callback_data="/UnLockPhoto:"..data.sender_user_id_},{text="فتح الصور",callback_data="/UnLockPhoto:"..data.sender_user_id_}},{{text="قفل التوجيه",callback_data="/lockForwards:"..data.sender_user_id_},{text="فتح التوجيه",callback_data="/UnLockForwards:"..data.sender_user_id_}},{{text="قفل التكرار",callback_data="/LockSpamList:"..data.sender_user_id_},{text="فتح التكرار",callback_data="/UnLockSpam:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/HelpList:"..data.sender_user_id_}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
@@ -2056,7 +2056,7 @@ keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
 end
-if DataText == '/unlockjoin:'..data.sender_user_id_ then
+if DataText == '/UnLockjoin:'..data.sender_user_id_ then
 if DevAbs:get(Antak..'Abs:Lock:Join'..data.chat_id_) then
 DevAbs:del(Antak..'Abs:Lock:Join'..data.chat_id_)
 Text = "*✯︙تم فتح الدخول بنجاح*"
@@ -2073,7 +2073,7 @@ keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
 end
-if DataText == '/unlockText:'..data.sender_user_id_ then
+if DataText == '/UnLockText:'..data.sender_user_id_ then
 if DevAbs:get(Antak..'Abs:Lock:Text'..data.chat_id_) then
 DevAbs:del(Antak..'Abs:Lock:Text'..data.chat_id_)
 Text = "*✯︙تم فتح الدردشه بنجاح*"
@@ -2090,7 +2090,7 @@ keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
 end
-if DataText == '/unlockTagServr:'..data.sender_user_id_ then
+if DataText == '/UnLockTagServr:'..data.sender_user_id_ then
 if DevAbs:get(Antak..'Abs:Lock:TagServr'..data.chat_id_) then
 DevAbs:del(Antak..'Abs:Lock:TagServr'..data.chat_id_) 
 Text = "*✯︙تم فتح الاشعارات بنجاح*"
@@ -2107,7 +2107,7 @@ keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
 end
-if DataText == '/unlockEditMsgs:'..data.sender_user_id_ then
+if DataText == '/UnLockEditMsgs:'..data.sender_user_id_ then
 if DevAbs:get(Antak..'Abs:Lock:EditMsgs'..data.chat_id_) then
 DevAbs:del(Antak..'Abs:Lock:EditMsgs'..data.chat_id_)
 Text = "*✯︙تم فتح التعديل بنجاح*"
@@ -2124,7 +2124,7 @@ keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
 end
-if DataText == '/unlockStickers:'..data.sender_user_id_ then
+if DataText == '/UnLockStickers:'..data.sender_user_id_ then
 if DevAbs:get(Antak..'Abs:Lock:Stickers'..data.chat_id_) then
 DevAbs:del(Antak..'Abs:Lock:Stickers'..data.chat_id_)
 Text = "*✯︙تم فتح الملصقات بنجاح*"
@@ -2141,7 +2141,7 @@ keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
 end
-if DataText == '/unlockGifs:'..data.sender_user_id_ then
+if DataText == '/UnLockGifs:'..data.sender_user_id_ then
 if DevAbs:get(Antak..'Abs:Lock:Gifs'..data.chat_id_) then
 DevAbs:del(Antak..'Abs:Lock:Gifs'..data.chat_id_)
 Text = "*✯︙تم فتح المتحركه بنجاح*"
@@ -2158,7 +2158,7 @@ keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
 end
-if DataText == '/unlockPhoto:'..data.sender_user_id_ then
+if DataText == '/UnLockPhoto:'..data.sender_user_id_ then
 if DevAbs:get(Antak..'Abs:Lock:Photo'..data.chat_id_) then
 DevAbs:del(Antak..'Abs:Lock:Photo'..data.chat_id_)
 Text = "*✯︙تم فتح الصور بنجاح*"
@@ -2175,7 +2175,7 @@ keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
 end
-if DataText == '/unlockVideos:'..data.sender_user_id_ then
+if DataText == '/UnLockVideos:'..data.sender_user_id_ then
 if DevAbs:get(Antak..'Abs:Lock:Videos'..data.chat_id_) then
 DevAbs:del(Antak..'Abs:Lock:Videos'..data.chat_id_)
 Text = "*✯︙تم فتح الفيديو بنجاح*"
@@ -2192,7 +2192,7 @@ keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
 end
-if DataText == '/unlockForwards:'..data.sender_user_id_ then
+if DataText == '/UnLockForwards:'..data.sender_user_id_ then
 if DevAbs:get(Antak..'Abs:Lock:Forwards'..data.chat_id_) then
 DevAbs:del(Antak..'Abs:Lock:Forwards'..data.chat_id_) 
 Text = "*✯︙تم فتح التوجيه بنجاح*"
@@ -2221,7 +2221,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/LockBotList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
-if DataText == '/unlockBot:'..data.sender_user_id_ then
+if DataText == '/UnLockBot:'..data.sender_user_id_ then
 DevAbs:del(Antak.."Abs:Lock:Bots"..data.chat_id_) 
 Text = "*✯︙تم فتح البوتات بنجاح*"
 keyboard = {} 
@@ -2256,7 +2256,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/LockSpamList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
-if DataText == '/unlockSpam:'..data.sender_user_id_ then
+if DataText == '/UnLockSpam:'..data.sender_user_id_ then
 DevAbs:hdel(Antak.."Abs:Spam:Group:User"..data.chat_id_ ,"Spam:User")  
 Text = "*✯︙تم فتح التكرار بنجاح*"
 keyboard = {} 
@@ -2457,8 +2457,8 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if DataText and DataText:match('/unLockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)') then
-local Abs = DataText:match('/unLockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)')
+if DataText and DataText:match('/UnLockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)') then
+local Abs = DataText:match('/UnLockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)')
 DevAbs:del(Antak..'Abs:Lock:Id:Photo'..data.chat_id_)
 Text = "*✯︙تم تفعيل الايدي بالصوره*"
 keyboard = {} 
@@ -2473,8 +2473,8 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if DataText and DataText:match('/unLockId:'..tonumber(data.sender_user_id_)..'(.*)') then
-local Abs = DataText:match('/unLockId:'..tonumber(data.sender_user_id_)..'(.*)')
+if DataText and DataText:match('/UnLockId:'..tonumber(data.sender_user_id_)..'(.*)') then
+local Abs = DataText:match('/UnLockId:'..tonumber(data.sender_user_id_)..'(.*)')
 DevAbs:del(Antak..'Abs:Lock:Id'..data.chat_id_)
 Text = "*✯︙تم تفعيل الايدي*"
 keyboard = {} 
@@ -2489,8 +2489,8 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if DataText and DataText:match('/unLockGpLinks:'..tonumber(data.sender_user_id_)..'(.*)') then
-local Abs = DataText:match('/unLockGpLinks:'..tonumber(data.sender_user_id_)..'(.*)')
+if DataText and DataText:match('/UnLockGpLinks:'..tonumber(data.sender_user_id_)..'(.*)') then
+local Abs = DataText:match('/UnLockGpLinks:'..tonumber(data.sender_user_id_)..'(.*)')
 DevAbs:del(Antak.."Abs:Lock:GpLinks"..data.chat_id_)
 Text = "*✯︙تم تفعيل الرابط*"
 keyboard = {} 
