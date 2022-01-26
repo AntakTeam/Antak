@@ -6413,24 +6413,28 @@ https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. ms
 return false
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
-if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس' then
-local url,res = https.request('https://api-watan.ml/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_AntakTeam ~= true then
-Dev_Abs(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @BAANDDE')   
-return false 
-end
-Text = "[⦑ Welcome to Source ⦒](t.me/BAANDDE)\n[✯ ⦑ SOURCE WaTaN ⦒](t.me/BAANDDE)\n✯ Source version : 3.2"
+if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
+photo = "https://t.me/BAANDDE/1032"
+local T =[[
+╔━━━━━━━━𓄼•★•𓄹━━━━━━━╗ 
+┇ ⦑𓆩.★ 𝕊𝕆𝕌ℝℂ𝔼 𝔹𝔸ℕ𝔻𝔼★.𓆪⦒ ┇
+╚━━━━━━━━𓄼•★•𓄹━━━━━━━╝ 
+]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝒄𝒉𝒂𝒏𝒏𝒆𝒍 𝒔𝒐𝒖𝒓𝒄𝒆',url="t.me/BAANDDE"},
-{text = '𝒖𝒑𝒅𝒂𝒕𝒆 𝒔𝒐𝒖𝒓𝒄𝒆',url="t.me/watanupdate"}},
-{{text = '𝒊𝒏𝒔𝒕𝒂𝒍𝒍 𝒔𝒐𝒖𝒓𝒄𝒆',url="https://t.me/BAANDDE/7"},
-{text = '𝒘𝒂𝒕𝒂𝒏 𝒈𝒓𝒐𝒖𝒑',url="https://t.me/joinchat/MJjy8Vab_jVmODdi"}},
-{{text = '𝒅𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓',url="t.me/D9l9l"}},
+
+{
+{text = '★ Developer', url = "https://t.me/D9l9l"},{text = '★ Exp Source .', url = "https://t.me/BAANDDE"}
+},
+{
+{text = '★ TwS BAANDE', url = "https://t.me/BANDAA22_BOT"}
+},
+{
+{text = ' ★ Source Channel', url = "https://t.me/BAANDDE"}
+},
 }
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/BAANDDE&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+local msgg = msg_id/2097152/0.5
+https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo="..photo.."&caption=".. URL.escape(T).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if ChatType == 'sp' or ChatType == 'gp'  then
