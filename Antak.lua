@@ -9704,7 +9704,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم حفظ كليشة الترحيب',
 return false   
 end
 if text and text:match("^ضع ترحيب$") and ChCheck(msg) or text and text:match("^وضع ترحيب$") and ChCheck(msg) or text and text:match("^اضف ترحيب$") and ChCheck(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙ارسل لي الترحيب الان\n✯︙تستطيع اضافة مايلي ↫ ⤈\n✯︙دالة عرض الاسم ↫ firstname\n✯︙دالة عرض المعرف ↫ username', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙ارسل لي الترحيب الان\n✯︙تستطيع اضافة مايلي ↫ ⤈\n✯︙دالة عرض الاسم ↫ firstname\n✯︙دالة عرض المعرف ↫ user', 1, 'md')
 DevAbs:set(Antak..'Abs:setwelcome'..msg.chat_id_..':'..msg.sender_user_id_,true)
 end
 if text and text:match("^حذف الترحيب$") and ChCheck(msg) or text and text:match("^حذف ترحيب$") and ChCheck(msg) then
@@ -11398,24 +11398,6 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/series:"..msg.sender_user_id_}},{{text = 'ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴✯Antak',url="t.me/BAANDDE"}}} 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MezohBande/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == "تفعيل المقطع" and Manager(msg) and ChCheck(msg) then
-local AntakTeam = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل المقاطع'
-Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, AntakTeam, 14, string.len(msg.sender_user_id_))
-DevAbs:del(Antak..'Abs:Series:Abs'..msg.chat_id_) 
-end
-if text == "تعطيل المقطع" and Manager(msg) and ChCheck(msg) then
-local AntakTeam = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تعطيل المقاطع'
-Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, AntakTeam, 14, string.len(msg.sender_user_id_))
-DevAbs:set(Antak..'Abs:Series:Abs'..msg.chat_id_,true)  
-end
-if text and (text == "مقطع" or text == "↫ المقطع ✯") and not DevAbs:get(Antak..'Abs:Series:Abs'..msg.chat_id_) and ChCheck(msg) then
-Abs = math.random(2,54); 
-local Text ='*✯︙تم اختيار المقطع لك*'
-keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/series:"..msg.sender_user_id_}},{{text = 'ѕᴏụʀᴄᴇ 𝙱𝙰𝙽𝙳𝙴✯Antak',url="t.me/BAANDDE"}}} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MSLSLBANDE/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Admin(msg) then
