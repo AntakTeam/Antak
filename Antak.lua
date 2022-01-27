@@ -17127,9 +17127,8 @@ else
 linkgp = ' لا يوجد رابط ارسل ضع رابط'
 end  
 DeleteMessage(Chat_id,{[0] = Msg_id})  
-send(msg.chat_id_, msg.id_,linkgp)        end      
-end,nil)
-end
+send(msg.chat_id_, msg.id_,linkgp)        end
+  end
 if Text and Text:match("^(%d+)unbeen(.*)$") then
 local notId  = Text:match("(%d+)")  
 local userid = Text:gsub('unbeen',''):gsub(notId,'')
