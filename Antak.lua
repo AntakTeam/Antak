@@ -17117,50 +17117,6 @@ end
 end -- Chat_Type = 'GroupBot' 
 end -- end msg 
 --------------------------------------------------------------------------------------------------------------
-function tdcli_update_callback(data)  -- clback
-if data.ID == "UpdateChannel" then 
-if data.channel_.status_.ID == "ChatMemberStatusKicked" then 
-bot_data:srem(ban_id..'Chek:Groups','-100'..data.channel_.id_)  
-end
-end
-if data.ID == "UpdateNewCallbackQuery" then
-local Chat_id = data.chat_id_
-local Msg_id = data.message_id_
-local msg_idd = Msg_id/2097152/0.5
-local Text = data.payload_.data_
-vardump(data)
-if Text and Text:match('yt/(.*)') then
-local Id_Link = Text:match('yt/(.*)') 
-tdcli_function ({ID = "GetUser",user_id_ = bot_id,},function(arg,data) 
-DeleteMessage(Chat_id,{[0] = Msg_id})  
-local textt = '- من فضلك اختر نوع التنزيل'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'تنزيل صوت', callback_data="mp3/"..Id_Link},
-},
-{
-{text = 'تنزيل فيديو', callback_data="mp4/"..Id_Link},
-},
-}
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id='..Chat_id..'&text='..textt..'&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-elseif Text and Text:match('mp3/(.*)') then
-local Id_Link = Text:match('mp3/(.*)') 
-DeleteMessage(Chat_id,{[0] = Msg_id})    
-https.request("https://mahmoudm50.xyz/7oda/ytd.php?url="..Id_Link.."&token="..token.."&chat="..data.chat_id_.."&type=mp3")
-elseif Text and Text:match('mp4/(.*)') then
-local Id_Link = Text:match('mp4/(.*)') 
-DeleteMessage(Chat_id,{[0] = Msg_id})    
-https.request("https://mahmoudm50.xyz/7oda/ytd.php?url="..Id_Link.."&token="..token.."&chat="..data.chat_id_.."&type=mp4")
-end      
-Ok_id  = Text:match("(%d+)")  
-if Text == 'okCaptcha'..data.sender_user_id_ then  
-DeleteMessage(Chat_id, {[0] = Msg_id}) 
-return https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. Chat_id .. "&user_id="..Ok_id .. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
-end
-if Text == '/ven3' then
-tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
-local link = bot_data:get(ban_id.."Private:Group:Link"..msg.chat_id_)            
 if link then                              
 send(msg.chat_id_,msg.id_,'.\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..link..')')                          
 else                
