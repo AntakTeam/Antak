@@ -17118,21 +17118,8 @@ end -- Chat_Type = 'GroupBot'
 end -- end msg 
 --------------------------------------------------------------------------------------------------------------
 
-if TextText:match("^(%d+)unbeen(.*)$") then
-local notId  = Text:match("(%d+)")  
-local userid = Text:gsub('unbeen',''):gsub(notId,'')
-if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
-local notText ='⌯ ︙عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-bot_data:srem(ban_id..'Ban:User'..Chat_id, userid)
-tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = Chat_id, user_id_ = userid, status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)   
-keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."Bbk"..userid}},{{text = '𝒂𝒏𝒖𝒃𝒊𝒔', url="t.me/SOURCEAntak"}},}
-https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape('\n*• ︙تم الغاء حظره بنجاح*')..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-return false
-end
+
+
 if Text and Text:match("^(%d+)been(.*)$") then
 local notId  = Text:match("(%d+)")  
 local userid = Text:gsub('been',''):gsub(notId,'')
