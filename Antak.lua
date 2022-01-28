@@ -17129,7 +17129,7 @@ end
 DeleteMessage(Chat_id,{[0] = Msg_id})  
 send(msg.chat_id_, msg.id_,linkgp)
 end
-end
+
 if TextText:match("^(%d+)unbeen(.*)$") then
 local notId  = Text:match("(%d+)")  
 local userid = Text:gsub('unbeen',''):gsub(notId,'')
