@@ -22021,25 +22021,6 @@ local ListGruoup = voice..manage.. infoo..deletee..'&can_invite_users=false'  ..
 https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id="..data.chat_id_ .."&user_id="..users[2]..ListGruoup)
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
-end
-
-
-if Text == 'EndAddarray'..data.sender_user_id_ then  
-if bot_data:get(ban_id..'Set:array'..data.sender_user_id_..':'..Chat_id) == 'true1' then
-bot_data:del(ban_id..'Set:array'..data.sender_user_id_..':'..Chat_id)
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '𝙎𝙊𝙐𝙍𝘾𝙀 𝘼𝙉𝙐𝘽𝙄𝙎 𝄬',url='http://t.me/SOURCEAntak'}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" *𖢅⤈تم حفظ الردود بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-else
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '𝙎𝙊𝙐𝙍𝘾𝙀 𝘼𝙉𝙐𝘽𝙄𝙎 𝄬',url='http://t.me/AntakTEAM'}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" *𖢅⤈تم تنفيذ الامر سابقا*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-end
 
 if Text and Text:match("^animation(.*)$") then  
 idch = Text:match("-100(%d+)")
