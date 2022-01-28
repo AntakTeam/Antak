@@ -17117,18 +17117,6 @@ end
 end -- Chat_Type = 'GroupBot' 
 end -- end msg 
 --------------------------------------------------------------------------------------------------------------
-if link then                              
-send(msg.chat_id_,msg.id_,'.\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..link..')')                          
-else                
-local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
-if linkgpp.ok == true then 
-linkgp = '𖢅⤈↫ＬＩＮＫ ＧＲＯＵＰ.\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
-else
-linkgp = ' لا يوجد رابط ارسل ضع رابط'
-end  
-DeleteMessage(Chat_id,{[0] = Msg_id})  
-send(msg.chat_id_, msg.id_,linkgp)
-end
 
 if TextText:match("^(%d+)unbeen(.*)$") then
 local notId  = Text:match("(%d+)")  
